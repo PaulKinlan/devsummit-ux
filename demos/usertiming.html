@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User timing</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <style>
+      body { padding: 10px;}
+      
+      #landscape, #portrait {
+        -webkit-transition: 1s ease-in-out all;
+        height: 100px;
+        background-color: #111;
+        color: white;
+        float: left;
+        width: 100px;
+        padding: 5px;
+        margin: 5px;
+        font-size: 18px;
+      }
+    </style>
+    <script>
+    onload = function() {
+      var start = document.getElementById("start");
+      start.onclick = function() {
+        performance.webkitMark('startTask1');
+        var i = 0;
+        while(i < 10000000) {i++}
+        performance.webkitMark('endTask1');
+
+        performance.webkitMark('startTask2');
+        var i = 0;
+        while(i < 20000000) {i++}
+        performance.webkitMark('endTask2');
+
+        var perfEntries = performance.webkitGetEntriesByType('mark');
+        output.innerText = "";
+        for (var i = 0; i < perfEntries.length; i++) {
+          output.innerText += ('Name: ' + perfEntries[i].name + '\n\t' +
+            ' Entry Type: ' + perfEntries[i].entryType +'\n\t' +
+            ' Start Time: ' + perfEntries[i].startTime +'\n\t' +
+            ' Duration: '   + perfEntries[i].duration  + '\n');
+        }
+      }
+    };
+    </script>
+  </head>
+  <body>
+    <h1>User timing</h1>
+    <button id="start" class="btn btn-primary">Start</button>
+    <pre id="output">
+      
+    </pre>
+     
+     <script>
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-40858405-1', 'mobile-html.appspot.com');
+       ga('send', 'pageview');
+
+     </script>
+  </body>
+</html>

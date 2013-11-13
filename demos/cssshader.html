@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Shader</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <style>
+ 
+    #v {
+      -webkit-filter:
+    custom(url(shaders/fold.vs) mix(url(shaders/fold.fs) multiply source-atop), 8 50 border-box, transform perspective(1000) scale(1) rotateX(0deg) rotateY(-30deg) rotateZ(0deg), t 0.5, spins 1.5, phase -0.7, shadow 1.5, mapDepth 40, mapCurve -0.3, minSpacing 0.3, useColoredBack 1, backColor 0.5 0.5 0.5 1);
+    }
+    </style>
+   
+  </head>
+  <body>
+    <video id="v" autoplay style="width:100%; min-height: 1px;background-color: black;"></video> 
+    <h1>CSS Shader</h1>
+    <script>
+      var v = document.querySelector("#v");
+      v.onclick = function(e) {
+        navigator.webkitGetUserMedia({video:true, audio: true}, function(s) {
+          v.src = window.URL.createObjectURL(s);
+        })
+      };
+    </script>
+    <h2>Code</h2>
+  </body>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-40858405-1', 'mobile-html.appspot.com');
+    ga('send', 'pageview');
+
+  </script>
+</html>

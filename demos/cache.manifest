@@ -1,0 +1,10 @@
+CACHE MANIFEST
+
+#version 1
+
+#Stylesheets
+css/bootstrap.min.css
+css/bootstrap-responsive.min.css
+
+#Images
+img/paul.png

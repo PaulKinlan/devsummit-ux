@@ -1,0 +1,41 @@
+application: devsummit-ux
+#application: google.com:mobile-html5-io-2013
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+default_expiration: "1d"
+
+handlers:
+- url: /
+  static_files: template.html
+  upload: template\.html
+
+- url: /slide_config\.js
+  static_files: slide_config.js
+  upload: slide_config\.js
+
+- url: /js
+  static_dir: js
+  
+- url: /demos
+  static_dir: demos
+
+- url: /theme
+  static_dir: theme
+
+- url: /images
+  static_dir: images
+
+- url: /browser-logos
+  static_dir: blogo
+
+- url: /blogo
+  static_dir: blogo
+
+- url: /videos
+  static_dir: videos
+  
+- url: /favicon\.ico
+  static_files: images/chrome-logo-tiny.png
+  upload: images/chrome-logo-tiny.png

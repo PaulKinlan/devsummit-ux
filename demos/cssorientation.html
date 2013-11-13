@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Orientation</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <style>
+      body { padding: 10px;}
+      
+      #landscape, #portrait {
+        -webkit-transition: 1s ease-in-out all;
+        height: 100px;
+        background-color: #111;
+        color: white;
+        float: left;
+        width: 100px;
+        padding: 5px;
+        margin: 5px;
+        font-size: 18px;
+      }
+      
+      @media (orientation: landscape) {
+        #landscape {
+          opacity: 1;
+        }
+        
+        #portrait {
+          opacity: 0.1;
+        }
+      }
+      
+      @media (orientation: portrait) {
+        #landscape {
+          opacity: 0.1;
+        }
+          
+        #portrait {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Orientation</h1>
+      <p></p>
+      <div id="portrait">This is visible in portrait.</div>
+      <div id="landscape">This is visible in landscape.</div>
+    <h2 style="clear:both;">Code</h2>
+    <pre>@media (orientation: landscape) {
+  #landscape {
+    opacity: 1;
+  }
+ 
+  #portrait {
+    opacity: 0.1;
+  }
+}
+
+@media (orientation: portrait) {
+  #landscape {
+    opacity: 0.1;
+  }
+   
+  #portrait {
+    opacity: 1;
+  }
+}</pre>
+  </body>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-40858405-1', 'mobile-html.appspot.com');
+    ga('send', 'pageview');
+
+  </script>
+</html>

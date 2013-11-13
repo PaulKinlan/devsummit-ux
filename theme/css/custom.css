@@ -1,0 +1,216 @@
+@font-face {
+  font-family: 'Alike';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Alike'), local('Alike-Regular'), url(/theme/Alike-Regular.ttf) format('woff');
+}
+
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Code Pro'), local('SourceCodePro-Regular'), url(/theme/SourceCodePro-Regular.ttf) format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(/theme/OpenSans-Regular.ttf) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(/theme/OpenSans-Semibold.ttf) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(/theme/OpenSans-Bold.ttf) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Open Sans Italic'), local('OpenSans-Italic'), url(/theme/OpenSans-Italic.ttf) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Open Sans Semibold Italic'), local('OpenSans-SemiboldItalic'), url(/theme/OpenSans-SemiboldItalic.ttf) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(/theme/OpenSans-BoldItalic.ttf) format('woff');
+}
+
+/** Make sure slides are properly aligned with each other. **/
+h4 {
+  margin-bottom: 10px;
+}
+
+slides > slide > hgroup+video+article {
+  margin-top: 0px;
+}
+
+slides > slide > hgroup+article {
+  margin-top: 5px;
+}
+
+.additional-margin-top {
+  margin-top: 45px;
+}
+
+/** Have badges to indicate whether a feature is available today,
+    or will be available in the near future. **/
+.today::after {
+  background: rgb(13, 168, 97);
+  background: linear-gradient(180deg, #00a86d, #009f5d);
+  color: white;
+  content: 'today';
+}
+
+.today.new::after {
+  content: 'brand new!';
+}
+
+.tomorrow::after {
+  background: rgb(244, 74, 63);
+  background: linear-gradient(180deg, #f9cc46, #f6c000);
+  color: white;
+  content: 'soon';
+}
+
+.today::after, .tomorrow::after {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: .4em;
+  margin-left: 25px;
+  padding: 2px 8px;
+  border-radius: 5px;
+  position: relative;
+  top: -6px;
+}
+
+/** Presenter information in the slide's notes **/
+aside.note .presenter {
+  font-weight: bold;
+  color: black;
+  padding-bottom: 10px;
+}
+
+aside.note ul { 
+  list-style-type: none;
+  margin-left: 0px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+aside.note ul li { margin-bottom: 0.1em; }
+
+aside.note ul li:before {
+  display: none;
+}
+
+.supports img {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+
+.supports img.no {
+  opacity: 0.2;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+p {
+	line-height: 1em;
+	margin-bottom: 0.5em;
+}
+
+h3.support.chrome {
+  background-image: 
+    url(../../../blogo/chrome.svg);
+  background-size: 32px 32px;
+  background-position: 32px 0px;
+  background-repeat: no-repeat;
+}
+
+h3.support.firefox {
+  background-image: 
+    url(/browser-logos/firefox.svg);
+  background-size: 32px 32px;
+  background-position: 64px 0px;
+  background-repeat: no-repeat;
+}
+
+h3.support.ie {
+  background-image: 
+    url(/browser-logos/ie10.svg);
+  background-size: 32px 32px;
+  background-position: 96px 0px;
+  background-repeat: no-repeat;
+}
+
+h3.support.safari {
+  background-image: 
+    url(/browser-logos/safari.png);
+  background-size: 32px 32px;
+  background-position: 128px 0px;
+  background-repeat: no-repeat;
+}
+
+h3.support.opera {
+  background-image: 
+    url(/browser-logos/opera.svg);
+  background-size: 32px 32px;
+  background-position: 160px 0px;
+  background-repeat: no-repeat;
+}
+
+.timing-bar {
+  height: 54px;
+  position: absolute;
+  margin-top: 266px;
+  line-height: 54px;
+  text-align: center;
+
+  border: 3px solid rgb(43, 73, 119);
+  background-color: rgb(170, 215, 226);
+}
+
+.timing-label {
+  border-left: 3px solid rgb(43, 73, 119);
+  position: absolute;
+  margin-top: 100px;
+  padding: 0px 0px 150px 5px;
+}
+
+.timing-navigation {
+  margin-left: 4px;
+}
+
+.timing-onload {
+  margin-left: 872px;
+}
+
+.timing-network {
+  width: 334px;
+  margin-left: 4px;
+}
+
+.timing-loading {
+  width: 221px;
+  margin-left: 348px;
+}
+
+.timing-process {
+  width: 291px;
+  margin-left: 579px;
+}

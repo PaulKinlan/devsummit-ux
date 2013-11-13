@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Touch Events</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <style>
+      body { padding: 10px; }
+      
+      #touch {
+        background-color: #000;
+        color: white;
+        font-size: 48px;
+        font-weight: 800;
+        border-radius: 10px;
+        padding: 40px;
+        margin: 10px;
+        text-align: center;
+        line-height: 1em;
+      }
+    </style>
+    <script>
+    onload = function() {
+      var touchstart = document.getElementById("touchstart");
+      var touchmove = document.getElementById("touchmove");
+      var touchend = document.getElementById("touchend");
+      var click = document.getElementById("click");
+      var diff = document.getElementById("diff");
+      
+      var touch = document.getElementById("touch");
+      var touchtime = 0;
+      
+      touch.ontouchstart = function(e) {
+        touchstart.innerText = touchtime = e.timeStamp;
+        touchmove.innerText = "";
+        touchend.innerText = "";
+        click.innerText = "";
+        
+        diff.innerText = "";
+      };
+      
+      touch.ontouchmove = function(e) {
+        e.preventDefault();
+        touchmove.innerText = e.timeStamp;
+      };
+      
+      touch.ontouchend = function(e) {
+        touchend.innerText = e.timeStamp;
+      };
+      
+      touch.onclick = function(e) {
+        click.innerText = e.timeStamp;
+        if(touchtime > 0) {
+          diff.innerText = "(" + (e.timeStamp - touchtime) + "ms difference from ontouchstart)";
+        }
+        touch.style.backgroundColor = "red";
+        setTimeout(function() {
+          touch.style.backgroundColor = "";
+        }, 40)
+      };
+    };
+    </script>
+  </head>
+  <body>
+    <h1>Touch events</h1>
+    <div id="container">
+      <div><b>ontouchstart</b>: <span id="touchstart"></span></div>
+      <div><b>ontouchmove</b>: <span id="touchmove"></span></div>
+      <div><b>ontouchend</b>: <span id="touchend"></span></div>
+      <div><b>onclick</b>: <span id="click"></span> <span id="diff"></span></div>
+    </div>
+    <div id="touch">
+      Touch in here.
+    </div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-40858405-1', 'mobile-html.appspot.com');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,934 @@
+<!--
+Google IO 2012/2013 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mobile UX</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css" />
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <link rel="stylesheet" media="all" href="theme/css/custom.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0" class="weavebg">
+  
+  <script>
+    document.addEventListener("slideenter", function(e) {
+      var vid = e.slide.querySelector("video");
+      if(vid) {
+        vid.play();
+      }
+
+    }, false);
+
+    document.addEventListener("slideleave", function(e) {
+       var vid = e.slide.querySelector("video");
+       if(vid) {
+         vid.pause();
+       }
+
+     }, false);
+
+  </script>
+
+<slides class="layout-widescreen">
+
+  <slide class="logoslide nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/google_developers_logo.png"></span>
+    </article>
+  </slide>
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/chrome_logo.png"></aside>
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+    </hgroup>
+    <aside class="note">
+      <!-- notes -->
+      <p class="presenter">BOTH - 40M</p>
+    </aside>
+  </slide>
+  
+  
+  <slide>
+    <article>
+      <h1>Paul Kinlan</h1>
+      <img src="images/paul.jpg" style="margin: 10px; width: 256px; height: 256px; float: left;  border-radius: 10px; box-shadow: 0 0 10px black;"><br><br><br>
+      <p>G+: <a href="http://google.com/+PaulKinlan">google.com/+PaulKinlan</a></p>
+      <p>Twitter: <a href="https://twitter.com/paul_kinlan">@paul_kinlan</a> </p>
+      <p>Blog: <a href="http://paul.kinlan.me">paul.kinlan.me</a> </p>
+    </article>
+  </slide>
+  
+  <slide class="segue">
+    <hgroup><h2 style="color: black">Who has a smartphone?</h2></hgroup>
+    <article>
+      <img src="images/nexus.png">
+    </article>
+    <aside class="note">
+      <!-- notes -->
+    </aside>
+  </slide>
+  
+
+  <slide class="segue red">
+     <hgroup>
+       <h2>Why Mobile Web UX at a dev conference?</h2>
+    </hgroup>
+  </slide>
+
+  <slide>
+     <hgroup>
+       <h2 >50% had a mobile experience</h2>
+    </hgroup>
+  </slide>
+  
+  <slide>
+     <hgroup>
+       <h2 >25% didn’t fit in on screen</h2>
+    </hgroup>
+  </slide>
+  
+  <slide>
+     <hgroup>
+       <h2 >X% had readable text</h2>
+    </hgroup>
+  </slide>
+  
+  <slide>
+     <hgroup>
+       <h2 >10% used Flash</h2>
+    </hgroup>
+  </slide>
+  
+  
+  <slide>
+     <hgroup>
+       <h2 >There is no excuse to not build a mobile experience</h2>
+    </hgroup>
+  </slide>
+  
+  <slide>
+     <hgroup>
+       <h2 >Mobile Web UX building blocks</h2>
+    </hgroup>
+  </slide>
+  
+  <slide>
+     <hgroup>
+       <h2 >To help you we are launching a tool</h2>
+    </hgroup>
+    <article>
+      <p>Announce PageSpeed insights for the Mobile Web</p>
+      <ul>
+        <li>Detects mobile viewport
+        <li>Detects content that fits in the viewport
+        <li>Highlights areas that are not clickable
+        <li>Shows you text that is not readable
+        <li>Highlights usage of legacy plugins
+      </ul>
+    </article>
+  </slide>
+  
+  <slide>
+     <hgroup>
+       <h2></h2>
+    </hgroup>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2 >Always use a viewport</h2>
+      <h3 class="supports">
+        <img src="blogo/chrome.svg">
+        <img src="blogo/android.png">
+        <img src="blogo/safari.png">
+        <img src="blogo/ie10.svg">
+        <img src="blogo/firefox.svg">
+        <img src="blogo/opera.svg">
+      </h3>
+    </hgroup>
+    <video class=demo poster="images/poster.png" loop muted>
+      <source src="videos/viewport.webm">
+    </video>
+    <article>
+	  <h3>The most critical element for mobile!</h3>
+
+      <h4>Device width:</h4>
+      <pre class="prettyprint">&lt;meta name="viewport" content="width=<b>device-width</b>" /&gt;</pre>
+     
+      <h4>Initial scale:</h4>
+      <pre class="prettyprint">&lt;meta name="viewport" content="initial-scale=<b>1.0</b>" /&gt;</pre>
+      
+      <pre class="additional-margin-top prettyprint">&lt;meta name="viewport"
+  content="width=<b>device-width</b>, initial-scale=<b>1.0</b>" /&gt;</pre>
+  
+      <p>
+        Demo: <a href="http://goo.gl/j9KLT">goo.gl/j9KLT</a>
+      </p>
+    </article>
+    <aside class="note">
+      <!-- notes -->
+      <p class="presenter">PETER - 35M</p>
+      <ul>
+        <li>Tell browser that page has been optimized for device screen.</li>
+        <li>Good control - zooming limits (or at all?)</li>
+        <li>Be wary of disabling zooming -- can hurt user experience (screen size)</li>
+      </ul>
+    </aside>
+  </slide>
+  
+  <slide>
+     <hgroup>
+       <h2 >Nexus 4 - 30%</h2>
+    </hgroup>
+    <article>
+      12pt font reads like a Xpt font.
+    </article>
+  </slide>
+  
+  <slide>
+     <hgroup>
+       <h2 >Nexus 5 - 30%</h2>
+    </hgroup>
+  </slide>
+  
+  <slide>
+     <hgroup>
+       <h2 >Nexus 7 - 70%</h2>
+    </hgroup>
+  </slide>
+  
+  <slide>
+     <hgroup>
+       <h2 >Nexus 10 - 80%</h2>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2 class="tomorrow">Device Adaptation</h2>
+      <h3 class="supports">
+        <img class="no" src="blogo/chrome.svg">
+        <img class="no" src="blogo/android.png">
+        <img class="no" src="blogo/safari.png">
+        <img class="no" src="blogo/ie10.svg">
+        <img class="no" src="blogo/firefox.svg">
+        <img class="no" src="blogo/opera.svg">
+      </h3>
+    </hgroup>
+    <article>
+	  <h3>A saner solution is on it's way!</h3>
+      <pre class="prettyprint"><b>@viewport</b> {
+  width: device-width;
+  orientation: portrait;
+}</pre>
+      <h3>Greater flexibility when used with Media Queries:</h3>
+      <pre class="prettyprint">@media screen and (min-width: 800px) { 
+  @viewport {
+    width: device-width;
+    user-zoom: fixed;
+    zoom: 1.0;
+  }
+}</pre>
+    </article>
+    <aside class="note">
+      <!-- notes -->
+      <p class="presenter">PETER - 34M</p>
+      <ul>
+        <li>..</li>
+      </ul>
+    </aside>
+  </slide>
+  
+  <slide class="fill segue nobackground" style="background-image: url(images/30inch.jpg); background-position: 0px -240px">
+    <hgroup><h2>Who has a 24 inch phone?</h2></hgroup>
+    <aside class="note">
+      <!-- notes -->
+      <p class="presenter"></p>
+    </aside>
+  </slide>
+    
+  <slide>
+    <hgroup>
+      <h2 >Media Queries</h2>
+      <h3 class="supports">
+        <img src="blogo/chrome.svg">
+        <img src="blogo/android.png">
+        <img src="blogo/safari.png">
+        <img src="blogo/ie10.svg">
+        <img src="blogo/firefox.svg">
+        <img src="blogo/opera.svg">
+      </h3>
+    </hgroup>
+    <article>
+      <h3>Adaptive to screen size</h3>
+  	  <pre class="prettyprint">@media screen and (min-width: 800px) { ... }</pre>
+	    <pre class="prettyprint">@media screen and (device-aspect-ratio: 16/9) { ... }</pre>
+      <pre class="prettyprint">@media screen and (resolution: 2dppx) { ... }</pre>
+	  <ul>
+        <li>Logically group your styling rules.</li>
+  	    <li>Dynamically responsive.</li>
+      </ul>
+    </article>
+    <aside class="note">
+      <!-- notes -->
+    </aside>
+   </slide>
+   
+  <slide>
+    <hgroup>
+        <h2>HTML5Rocks redesign</h2>
+    </hgroup>
+  </slide>
+  
+  <slide>
+      <hgroup>
+        <h2>Size to content not to device</h2>
+     </hgroup>
+     <article>
+       <p>Less maintenance</p>
+     </article>
+  </slide>
+  
+  <slide>
+      <hgroup>
+        <h2>Font readability</h2>
+        <h3 class="supports">
+           <img src="blogo/chrome.svg">
+           <img src="blogo/android.png">
+           <img src="blogo/safari.png">
+           <img src="blogo/ie10.svg">
+           <img src="blogo/firefox.svg">
+           <img src="blogo/opera.svg">
+         </h3>
+     </hgroup>
+     <video class=demo poster="images/poster.png" loop muted>
+        <source src="videos/fontreadability.webm"></source>
+     </video>
+     <article>
+       <ul>
+        <li>Minimum 12pt
+        <li>Increased contrast
+       </ul>
+     </article>
+  </slide>
+  
+  <slide>
+      <hgroup>
+        <h2>Limit use of Web Fonts</h2>
+        <h3 class="supports">
+           <img src="blogo/chrome.svg">
+           <img src="blogo/android.png">
+           <img src="blogo/safari.png">
+           <img src="blogo/ie10.svg">
+           <img src="blogo/firefox.svg">
+           <img src="blogo/opera.svg">
+         </h3>
+     </hgroup>
+     <video class=demo poster="images/poster.png" loop muted>
+       <source src="videos/webfonts.webm"></source>
+     </video>
+     <article>
+       <p></p>
+     </article>
+  </slide>
+   
+  <slide class="segue red">
+     <hgroup>
+       <h2>Interaction</h2>
+    </hgroup>
+  </slide>
+  
+  <slide>
+      <hgroup>
+        <h2>Click disambiguation</h2><h3 class="supports">
+           <img src="blogo/chrome.svg">
+           <img src="blogo/android.png">
+           <img src="blogo/safari.png">
+           <img src="blogo/ie10.svg">
+           <img src="blogo/firefox.svg">
+           <img src="blogo/opera.svg">
+         </h3>
+     </hgroup>
+  </slide>
+  
+  <slide>
+      <hgroup>
+        <h2>Tap Targets</h2>
+        <h3 class="supports">
+           <img src="blogo/chrome.svg">
+           <img src="blogo/android.png">
+           <img src="blogo/safari.png">
+           <img src="blogo/ie10.svg">
+           <img src="blogo/firefox.svg">
+           <img src="blogo/opera.svg">
+         </h3>
+     </hgroup>
+     <video class=demo poster="images/poster.png" loop muted>
+       <source src="videos/taptargets.webm"></source>
+     </video>
+     <article>
+        <li>Increase target size (7mm)
+        <li>Increase padding
+        <li>Increase margin (5mm minimum)
+    </article>
+    <aside class="note">
+      <p>Padding is part of the tappable area.</p>
+      <p>Quite easy when you have a viewport.</p>
+    </aside>
+  </slide>
+  
+  <slide>
+      <hgroup>
+        <h2>Form inputs</h2>
+        <h3 class="supports">
+           <img src="blogo/chrome.svg">
+           <img src="blogo/android.png">
+           <img src="blogo/safari.png">
+           <img src="blogo/ie10.svg">
+           <img src="blogo/firefox.svg">
+           <img src="blogo/opera.svg">
+         </h3>
+     </hgroup>
+     <video class=demo poster="images/poster.png" loop muted>
+       <source src="videos/taptargets.webm"></source>
+     </video>
+     <article>
+       <li>Use &lt;label for="elementid"&gt;
+       <pre class="prettyprint"></pre>
+     </article>
+  </slide>
+  
+  <slide>
+      <hgroup>
+        <h2>Tap Targets without a viewport</h2>
+        <h3 class="supports">
+           <img src="blogo/chrome.svg">
+           <img src="blogo/android.png">
+           <img src="blogo/safari.png">
+           <img src="blogo/ie10.svg">
+           <img src="blogo/firefox.svg">
+           <img src="blogo/opera.svg">
+         </h3>
+     </hgroup>
+     <video class=demo poster="images/poster.png" loop muted>
+       <source src="videos/taptargetsnoviewport.webm"></source>
+     </video>
+     <article>
+       <ul>
+        <li>N4 - 30% of the size
+        <li>N5 - 30% of the size
+        <li>... [todo]
+       </ul>
+       
+       <ul>
+         <li>Everything becomes impossible to touch
+       </ul>
+    </article>
+    <aside class="note">
+      <p>This is why it is so important</p>
+      <p>Quite easy when you have a viewport.</p>
+    </aside>
+  </slide>
+  
+  <slide>
+      <hgroup>
+        <h2>Size content</h2>
+        <h3 class="supports">
+           <img src="blogo/chrome.svg">
+           <img src="blogo/android.png">
+           <img src="blogo/safari.png">
+           <img src="blogo/ie10.svg">
+           <img src="blogo/firefox.svg">
+           <img src="blogo/opera.svg">
+         </h3>
+     </hgroup>
+     <video class=demo poster="images/poster.png" loop muted>
+        <source src="videos/viewportsize.webm"></source>
+      </video>
+     <article>
+       
+    </article>
+  </slide>
+  
+  <slide class="segue red">
+     <hgroup>
+       <h2>Who likes waiting in a queue?</h2>
+    </hgroup>
+    <aside class="note">
+      <p>I do.  I am british.  Stood in this queue for 3 hours without complaining once to BA :\</p>
+    </aside>
+  </slide>
+    
+  <slide>
+    <hgroup>
+       <h2>300ms click delay</h2>
+       <h3 class="supports">
+         <img src="blogo/chrome.svg">
+         <img src="blogo/android.png">
+         <img src="blogo/safari.png">
+         <img src="blogo/ie10.svg">
+         <img src="blogo/firefox.svg">
+         <img src="blogo/opera.svg">
+       </h3>
+    </hgroup>
+    <video class=demo poster="images/poster.png" loop muted>
+      <source src="videos/sizedcontent.webm"></source>
+    </video>
+    <article>
+      
+    </article>
+  </slide>
+  
+  <slide>
+     <hgroup>
+       <h2 >Google Interview Question</h2>
+       <h3 class="supports">
+          <img src="blogo/chrome.svg">
+          <img src="blogo/android.png">
+          <img src="blogo/safari.png">
+          <img src="blogo/ie10.svg">
+          <img src="blogo/firefox.svg">
+          <img src="blogo/opera.svg">
+        </h3>
+    </hgroup>
+    <article>
+      <h2>How much time would we waste every day with the 300ms?
+      </h2>
+    </article>
+  </slide>
+  
+  <slide>
+     <hgroup>
+       <h2 ></h2>
+    </hgroup>
+    <article>
+      <h2>I have no idea</h2>
+    </article>
+  </slide>
+  
+  <slide>
+     <hgroup>
+       <h2 ></h2>
+    </hgroup>
+    <article>
+      <h2>But I do know for Wikipedia
+      </h2>
+      <p>http://stats.wikimedia.org/EN/TablesPageViewsMonthlyMobile.htm</p>
+    </article>
+  </slide>
+  
+  <slide>
+      <hgroup>
+        <h2 ></h2>
+     </hgroup>
+     <article>
+       <h2>3 Billions requests per day
+       </h2>
+     </article>
+   </slide>
+  
+   <slide>
+        <hgroup>
+          <h2 ></h2>
+       </hgroup>
+       <article>
+         <h2>1,400 request per second
+         </h2>
+       </article>
+     </slide>
+     
+   <slide>
+       <hgroup>
+         <h2 ></h2>
+      </hgroup>
+      <article>
+        <h2>423 seconds wasted every second
+        (1411 * 0.300)
+        </h2>
+      </article>
+    </slide>
+    
+    <slide>
+         <hgroup>
+           <h2 ></h2>
+        </hgroup>
+        <article>
+          <h2>36,547,200 seconds wasted every day = 1 year
+          </h2>
+        </article>
+      </slide>
+      
+  <slide>
+       <hgroup>
+         <h2 ></h2>
+      </hgroup>
+      <article>
+        <h2>36,547,200 seconds wasted every day = 1 year
+        </h2>
+      </article>
+    </slide>
+    
+   <slide>
+     <hgroup>
+       <h2></h2>
+    </hgroup>
+    <article>
+      <h2>Chrome is removing 300ms delay</h2>
+    </article>
+  </slide>
+  
+  <slide>
+     <hgroup>
+       <h2>Great for links</h2>
+       <h3 class="supports">
+         <img src="blogo/chrome.svg">
+         <img src="blogo/android.png">
+         <img src="blogo/safari.png">
+         <img src="blogo/ie10.svg">
+         <img src="blogo/firefox.svg">
+         <img src="blogo/opera.svg">
+       </h3>
+    </hgroup>
+    <video class=demo poster="images/poster.png" loop muted>
+       <source src="videos/links.webm"></source>
+     </video>
+    <article>
+    </article>
+  </slide>
+  
+  <slide>
+      <hgroup>
+        <h2>Better for interaction</h2>
+        <h3 class="supports">
+          <img src="blogo/chrome.svg">
+          <img src="blogo/android.png">
+          <img src="blogo/safari.png">
+          <img src="blogo/ie10.svg">
+          <img src="blogo/firefox.svg">
+          <img src="blogo/opera.svg">
+        </h3>
+     </hgroup>
+     <video class=demo poster="images/poster.png" loop muted>
+       <source src="videos/interaction.webm"></source>
+     </video>
+     <article></article>
+   </slide>
+   
+   <slide>
+       <hgroup>
+         <h2>Correctly sized content</h2>
+         <h3 class="supports">
+           <img src="blogo/chrome.svg">
+           <img src="blogo/android.png">
+           <img src="blogo/safari.png">
+           <img src="blogo/ie10.svg">
+           <img src="blogo/firefox.svg">
+           <img src="blogo/opera.svg">
+         </h3>
+      </hgroup>
+      <video class=demo poster="images/poster.png" loop muted>
+        <source src="videos/sizedcontent.webm"></source>
+      </video>
+      <article>
+        <pre class="prettyprint">&lt;meta name="viewport"
+  content="width=device-width"&gt;
+        </pre>
+      </article>
+      <aside class="note">
+        <p>This is why correctly sized content is so important</p>
+      </aside>
+    </slide>
+    
+  <slide class="fill segue nobackground" style="background-image: url(images/typingcrop.jpeg);">
+    <article><hgroup><h2>Who loves typing on a phone?</h2></hgroup></article>
+    <aside class="note">
+      <!-- notes -->
+      <p class="presenter">PETER - 37M</p>
+    </aside>
+  </slide>
+  
+   <slide>
+       <hgroup>
+         <h2>Minimize typing</h2>
+         <h3 class="supports">
+           <img src="blogo/chrome.svg">
+           <img src="blogo/android.png">
+           <img src="blogo/safari.png">
+           <img src="blogo/ie10.svg">
+           <img src="blogo/firefox.svg">
+           <img src="blogo/opera.svg">
+         </h3>
+      </hgroup>
+      <article>
+        <ul>
+          <li>Use semantic input types
+          <li>Take advantage of autocomplete
+          <li>Automate form submission with requestAutocomplete
+        </ul>
+      </article>
+      <aside class="note">
+        
+      </aside>
+    </slide>
+  
+    <slide>
+      <hgroup>
+        <h2>Semantic input types</h2>
+        <h3 class="supports">
+          <img src="blogo/chrome.svg">
+          <img src="blogo/android.png">
+          <img src="blogo/safari.png">
+          <img src="blogo/ie10.svg">
+          <img src="blogo/firefox.svg">
+          <img src="blogo/opera.svg">
+        </h3>
+      </hgroup>
+      <video class=demo poster="images/poster.png" loop muted>
+        <source src="videos/input.webm"></source>
+      </video>
+      <article>
+        <h3>Specialized on-screen keyboards</h3>
+        <pre class="prettyprint" data-lang="html">&lt;input type="email" /&gt;
+&lt;input type="search" /&gt;
+&lt;input type="url" /&gt;
+&lt;input type="tel" /&gt;
+&lt;input type="number" /&gt;
+&lt;input type="date" /&gt;
+&lt;input type="week" /&gt;
+&lt;input type="month" /&gt;
+&lt;input type="datetime-local" /&gt;</pre>
+        <p>Demo: <a href="http://goo.gl/CNMp6" target="_blank">goo.gl/CNMp6</a></p>
+      </article>
+      <aside class="note">
+        <!-- notes -->
+        <ul>
+          <li>..</li>
+        </ul>
+      </aside>
+    </slide>
+    
+     <slide>
+        <hgroup>
+          <h2>Take advantage of autocomplete</h2>
+          <h3 class="supports">
+            <img src="blogo/chrome.svg">
+            <img src="blogo/android.png">
+            <img src="blogo/safari.png">
+            <img src="blogo/ie10.svg">
+            <img src="blogo/firefox.svg">
+            <img src="blogo/opera.svg">
+          </h3>
+        </hgroup>
+        <video class=demo poster="images/poster.png" loop muted>
+          <source src="videos/autocomplete.webm"></source>
+        </video>
+        <article>
+          <h3>Hints to the browser</h3>
+          <pre class="prettyprint" data-lang="html">&lt;form method="post">
+  First name:&lt;input type="text" <strong>name="fname"</strong> />
+  Last name: &lt;input type="text" name="lname" />
+  E-mail: &lt;input type="text" name="email" />
+  Phone: &lt;input type="text" name="phone" />
+  Address: &lt;input type="text" name="address" />
+&lt;/form>
+          </pre>
+          <p>Demo: <a href="http://goo.gl/CNMp6" target="_blank">goo.gl/CNMp6</a></p>
+        </article>
+        <aside class="note">
+          <!-- notes -->
+        </aside>
+      </slide>
+      
+      <slide>
+          <hgroup>
+            <h2>Plan for requestAutoComplete</h2>
+            <h3 class="supports">
+              <img src="blogo/chrome.svg">
+              <img src="blogo/android.png">
+              <img src="blogo/safari.png">
+              <img src="blogo/ie10.svg">
+              <img src="blogo/firefox.svg">
+              <img src="blogo/opera.svg">
+            </h3>
+          </hgroup>
+          <video class=demo poster="images/poster.png" loop muted>
+            <source src="videos/autocomplete.webm"></source>
+          </video>
+          <article>
+            <pre class="prettyprint" data-lang="html">// todo, add feature detect.
+              
+button.addEventListener('click', function(){
+  form.requestAutocomplete();
+});
+
+// see details on event handling below
+form.addEventListener('autocomplete', function(){
+  // successful rAc
+  // Call your client-side form validation logic here, if you have any.
+  form.submit();  // trigger submit
+});
+
+form.addEventListener('autocompleteerror', function(){
+  // event.reason is one of "cancel", "invalid" or "disabled".
+  // handle error...
+});</pre>
+            <p>Demo: <a href="http://goo.gl/CNMp6" target="_blank">goo.gl/CNMp6</a></p>
+          </article>
+          <aside class="note">
+            <!-- notes -->
+            <p class="presenter">PETER - 25M</p>
+            <ul>
+              <li>..</li>
+            </ul>
+          </aside>
+        </slide>
+
+    <slide>
+      <hgroup>
+        <h2>Touch Events</h2>
+        <h3 class="supports">
+          <img src="blogo/chrome.svg">
+          <img src="blogo/android.png">
+          <img src="blogo/safari.png">
+          <img src="blogo/ie10.svg">
+          <img src="blogo/firefox.svg">
+          <img src="blogo/opera.svg">
+        </h3>
+      </hgroup>
+      <video class=demo poster="images/poster.png" loop muted>
+        <source src="videos/touchevents.webm"></source>
+      </video>
+      <article>
+        <p>Todo: content change</p>
+  	   <h3>Handle the visitor's touches</h3>
+         <pre class="prettyprint" data-lang="javascript">[element].ontouchstart = function(event) {};
+[element].ontouchmove = function(event) {};
+[element].ontouchend = function(event) {};</pre>
+        <h1><span style="color:red;">Warning:</span> 300 millisecond click delay.</h1><br><br>
+        <p>Docs: <a href="http://goo.gl/8ybb5">goo.gl/8ybb5</a></p> 
+        <p>Demo: <a href="http://goo.gl/ZwOzk" target="_blank">goo.gl/ZwOzk</a></p>
+      </article>
+      <aside class="note">
+        <!-- notes -->
+        <p class="presenter">PETER - 24M</p>
+        <ul>
+          <li>..</li>
+        </ul>
+      </aside>
+    </slide>
+    
+  <slide >
+     <hgroup>
+       <h1>Remove fullscreen app ads</h1>
+       <h3 class="supports">
+         <img src="blogo/chrome.svg">
+         <img src="blogo/android.png">
+         <img src="blogo/safari.png">
+         <img src="blogo/ie10.svg">
+         <img src="blogo/firefox.svg">
+         <img src="blogo/opera.svg">
+       </h3>
+     </hgroup>
+     <video class=demo poster="images/poster.png" loop muted>
+       <source src="videos/interstial.webm"></source>
+     </video>
+     <article>
+       <h3>Don't stop users getting to your content</h3>
+       <ul>
+          <li>Don't do it!
+       </ul>
+       <p>But if you do need to use them, be smart</p>
+       <ul>
+         <li>Only show it once
+         <li>Use app-banner on iOS
+         <li>Emulate app-banner on Android
+       </ul>
+     </article>
+     <aside class="note">
+       <!-- notes -->
+       <p class="presenter">PETER - 13M</p>
+     </aside>
+   </slide>
+  
+  <slide class="title-slide segue blue">
+     <hgroup>
+       <h1>Wrapping up</h1>
+     </hgroup>
+    <article>
+      <ul class="build">
+        <h1 class="build" style="margin-bottom: 20px;">We can:</h1>
+        <li class="build">Detect problems before they arise
+        <li class="build">Configure a sane viewport
+        <li class="build">Size content to the viewport
+        <li class="build">Make text readable
+        <li class="build">Reduce the amount of input
+        <li class="build">Ensure consistent tap targets
+        <li class="build">Give us feed back!</li>
+      </ul>
+    </article>
+    <aside class="note">
+      <!-- notes -->
+      <p class="presenter"></p>
+     
+    </aside>
+  </slide>
+ 
+  <slide class="thank-you-slide segue nobackground">
+    <aside class="gdbar right"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <p><a href="http://mobile-ux.appspot.com" style="color: white;">mobile-ux.appspot.com</a></p>
+    </article>
+    <p class="auto-fadein" data-config-contact>
+      <!-- populated from slide_config.json -->
+    </p>
+  </slide>
+
+  <slide class="logoslide dark nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/google_developers_logo_white.png"></span>
+    </article>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40858405-1', 'mobile-html.appspot.com');
+  ga('send', 'pageview');
+
+</script>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
