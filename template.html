@@ -23,7 +23,7 @@ URL: https://code.google.com/p/io-2012-slides
   <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
   <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
 </head>
-<body style="opacity: 0" class="weavebg">
+<body style="opacity: 1">
   
   <script>
     document.addEventListener("slideenter", function(e) {
@@ -94,34 +94,33 @@ URL: https://code.google.com/p/io-2012-slides
     </hgroup>
   </slide>
 
-  <slide>
+  <slide class="segue clear">
      <hgroup>
-       <h2 >50% had a mobile experience</h2>
+       <h2>50% had a mobile experience</h2>
+    </hgroup>
+  </slide>
+  
+  <slide class="segue clear">
+     <hgroup>
+       <h2>25% didn’t fit in on screen</h2>
+    </hgroup>
+  </slide>
+  
+  <slide class="segue clear">
+     <hgroup>
+       <h2>X% had readable text</h2>
+    </hgroup>
+  </slide>
+  
+  <slide class="segue transparent">
+     <hgroup>
+       <h2>10% used Flash</h2>
     </hgroup>
   </slide>
   
   <slide>
      <hgroup>
-       <h2 >25% didn’t fit in on screen</h2>
-    </hgroup>
-  </slide>
-  
-  <slide>
-     <hgroup>
-       <h2 >X% had readable text</h2>
-    </hgroup>
-  </slide>
-  
-  <slide>
-     <hgroup>
-       <h2 >10% used Flash</h2>
-    </hgroup>
-  </slide>
-  
-  
-  <slide>
-     <hgroup>
-       <h2 >There is no excuse to not build a mobile experience</h2>
+       <h2>There is no excuse to not build a mobile experience</h2>
     </hgroup>
   </slide>
   
@@ -149,14 +148,13 @@ URL: https://code.google.com/p/io-2012-slides
   
   <slide>
      <hgroup>
-       <h2></h2>
+       <h2>DEMO</h2>
     </hgroup>
   </slide>
 
-
   <slide>
     <hgroup>
-      <h2 >Always use a viewport</h2>
+      <h2>Always use a viewport</h2>
       <h3 class="supports">
         <img src="blogo/chrome.svg">
         <img src="blogo/android.png">
@@ -387,15 +385,48 @@ URL: https://code.google.com/p/io-2012-slides
        <source src="videos/taptargets.webm"></source>
      </video>
      <article>
-        <li>Increase target size (7mm)
-        <li>Increase padding
-        <li>Increase margin (5mm minimum)
+        <h2>Recommendations</h2>
+        <ul>
+         <li>iOS 44 pts
+         <li>Android: 48dips
+         <li>Microsoft: 23 DLG
+        </ul>
+
     </article>
     <aside class="note">
       <p>Padding is part of the tappable area.</p>
       <p>Quite easy when you have a viewport.</p>
     </aside>
   </slide>
+  
+  <slide>
+       <hgroup>
+         <h2>Tap Targets - In the real world</h2>
+         <h3 class="supports">
+            <img src="blogo/chrome.svg">
+            <img src="blogo/android.png">
+            <img src="blogo/safari.png">
+            <img src="blogo/ie10.svg">
+            <img src="blogo/firefox.svg">
+            <img src="blogo/opera.svg">
+          </h3>
+      </hgroup>
+      <video class=demo poster="images/poster.png" loop muted>
+        <source src="videos/taptargets.webm"></source>
+      </video>
+      <article>
+        <h2>In the real world</h2>
+        <ul>
+         <li>Increase target size (7mm)
+         <li>Increase margin (5mm minimum)
+         <li>Increase padding
+        </ul>
+     </article>
+     <aside class="note">
+       <p>Padding is part of the tappable area.</p>
+       <p>Quite easy when you have a viewport.</p>
+     </aside>
+   </slide>
   
   <slide>
       <hgroup>
@@ -410,11 +441,17 @@ URL: https://code.google.com/p/io-2012-slides
          </h3>
      </hgroup>
      <video class=demo poster="images/poster.png" loop muted>
-       <source src="videos/taptargets.webm"></source>
+       <source src="videos/taptargetslabel.webm"></source>
      </video>
      <article>
        <li>Use &lt;label for="elementid"&gt;
-       <pre class="prettyprint"></pre>
+       <pre class="prettyprint">&lt;form method="post">
+  &lt;label for="fname">First name:&lt;/label>&lt;input type="text" name="fname" id="fname" />
+  &lt;label for="lname">Last name:&lt;/label>&lt;input type="text" name="lname" id="lname"/>
+  &lt;label for="email">E-mail:&lt;/label>&lt;input type="text" name="email" id="email" />
+  &lt;label for="phone">Phone:&lt;/label>&lt;input type="text" name="phone" id="phone" />
+  &lt;label for="address">Address:&lt;/label>&lt;input type="text" name="address" id="address" />
+&lt;/form></pre>
      </article>
   </slide>
   
@@ -499,25 +536,16 @@ URL: https://code.google.com/p/io-2012-slides
     </article>
   </slide>
   
-  <slide>
+  <slide class="segue blue">
      <hgroup>
        <h2 >Google Interview Question</h2>
-       <h3 class="supports">
-          <img src="blogo/chrome.svg">
-          <img src="blogo/android.png">
-          <img src="blogo/safari.png">
-          <img src="blogo/ie10.svg">
-          <img src="blogo/firefox.svg">
-          <img src="blogo/opera.svg">
-        </h3>
     </hgroup>
     <article>
-      <h2>How much time would we waste every day with the 300ms?
-      </h2>
+      <h2>How much time would we waste every day with the 300ms?</h2>
     </article>
   </slide>
   
-  <slide>
+  <slide class="segue dark">
      <hgroup>
        <h2 ></h2>
     </hgroup>
@@ -526,7 +554,7 @@ URL: https://code.google.com/p/io-2012-slides
     </article>
   </slide>
   
-  <slide>
+  <slide class="segue dark">
      <hgroup>
        <h2 ></h2>
     </hgroup>
@@ -537,7 +565,7 @@ URL: https://code.google.com/p/io-2012-slides
     </article>
   </slide>
   
-  <slide>
+  <slide class="segue dark">
       <hgroup>
         <h2 ></h2>
      </hgroup>
@@ -547,7 +575,7 @@ URL: https://code.google.com/p/io-2012-slides
      </article>
    </slide>
   
-   <slide>
+   <slide class="segue dark">
         <hgroup>
           <h2 ></h2>
        </hgroup>
@@ -557,7 +585,7 @@ URL: https://code.google.com/p/io-2012-slides
        </article>
      </slide>
      
-   <slide>
+   <slide class="segue dark">
        <hgroup>
          <h2 ></h2>
       </hgroup>
@@ -568,9 +596,9 @@ URL: https://code.google.com/p/io-2012-slides
       </article>
     </slide>
     
-    <slide>
+    <slide class="segue dark">
          <hgroup>
-           <h2 ></h2>
+           <h2></h2>
         </hgroup>
         <article>
           <h2>36,547,200 seconds wasted every day = 1 year
@@ -578,22 +606,31 @@ URL: https://code.google.com/p/io-2012-slides
         </article>
       </slide>
       
-  <slide>
+  <slide class="segue dark">
        <hgroup>
-         <h2 ></h2>
+         <h2></h2>
       </hgroup>
       <article>
-        <h2>36,547,200 seconds wasted every day = 1 year
-        </h2>
+        <h2>36,547,200 seconds wasted every day = 1 year</h2>
       </article>
     </slide>
+    
+    <slide class="segue dark">
+         <hgroup>
+           <h2></h2>
+        </hgroup>
+        <article>
+          <h1>1 year</h1>
+        </article>
+      </slide>
+    
     
    <slide>
      <hgroup>
        <h2></h2>
     </hgroup>
     <article>
-      <h2>Chrome is removing 300ms delay</h2>
+      <q>Chrome is removing 300ms delay</q>
     </article>
   </slide>
   

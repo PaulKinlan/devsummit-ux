@@ -246,6 +246,28 @@ slides > slide {
          content:""
     }
   }
+  
+  &.clear {
+    background: white !important;
+    color: black;
+    
+    h2 {
+      color: black;
+    }
+    
+    q {
+      font-size: 128px;
+      line-height: 1;
+      color: white;
+    }
+    
+    q:before { 
+      content:""
+    }
+    q:after { 
+         content:""
+    }
+  }
 
   &:not(.nobackground) {
     //background: white url(../../images/google_developers_icon_128.png) ($brand-small-icon-size * 2) 98% no-repeat;
@@ -441,17 +463,6 @@ ul {
   ul {
     margin-top: .5em;
   }
-}
-
-.weavebg {
-background: -webkit-linear-gradient(63deg, hsl(0, 0%, 8%) 5px, hsla(0, 0%, 0%, 0) 5px) 0 5px,-webkit-linear-gradient(243deg, hsl(0, 0%, 8%) 5px, hsla(0, 0%, 0%, 0) 5px) 10px 0px,-webkit-linear-gradient(63deg, hsl(0, 0%, 13%) 5px, hsla(0, 0%, 0%, 0) 5px) 0px 10px,-webkit-linear-gradient(243deg, hsl(0, 0%, 13%) 5px, hsla(0, 0%, 0%, 0) 5px) 10px 5px,-webkit-linear-gradient(0deg, hsl(0, 0%, 11%) 10px, hsla(0, 0%, 0%, 0) 10px),-webkit-linear-gradient(hsl(0, 0%, 11%) 25%, hsl(0, 0%, 10%) 25%, hsl(0, 0%, 10%) 50%, hsla(0, 0%, 0%, 0) 50%, hsla(0, 0%, 0%, 0) 75%, hsl(0, 0%, 14%) 75%, hsl(0, 0%, 14%));
-background: -moz-linear-gradient(63deg, hsl(0, 0%, 8%) 5px, hsla(0, 0%, 0%, 0) 5px) 0 5px,-moz-linear-gradient(243deg, hsl(0, 0%, 8%) 5px, hsla(0, 0%, 0%, 0) 5px) 10px 0px,-moz-linear-gradient(63deg, hsl(0, 0%, 13%) 5px, hsla(0, 0%, 0%, 0) 5px) 0px 10px,-moz-linear-gradient(243deg, hsl(0, 0%, 13%) 5px, hsla(0, 0%, 0%, 0) 5px) 10px 5px,-moz-linear-gradient(0deg, hsl(0, 0%, 11%) 10px, hsla(0, 0%, 0%, 0) 10px),-moz-linear-gradient(hsl(0, 0%, 11%) 25%, hsl(0, 0%, 10%) 25%, hsl(0, 0%, 10%) 50%, hsla(0, 0%, 0%, 0) 50%, hsla(0, 0%, 0%, 0) 75%, hsl(0, 0%, 14%) 75%, hsl(0, 0%, 14%));
-background: -ms-linear-gradient(63deg, hsl(0, 0%, 8%) 5px, hsla(0, 0%, 0%, 0) 5px) 0 5px,-ms-linear-gradient(243deg, hsl(0, 0%, 8%) 5px, hsla(0, 0%, 0%, 0) 5px) 10px 0px,-ms-linear-gradient(63deg, hsl(0, 0%, 13%) 5px, hsla(0, 0%, 0%, 0) 5px) 0px 10px,-ms-linear-gradient(243deg, hsl(0, 0%, 13%) 5px, hsla(0, 0%, 0%, 0) 5px) 10px 5px,-ms-linear-gradient(0deg, hsl(0, 0%, 11%) 10px, hsla(0, 0%, 0%, 0) 10px),-ms-linear-gradient(hsl(0, 0%, 11%) 25%, hsl(0, 0%, 10%) 25%, hsl(0, 0%, 10%) 50%, hsla(0, 0%, 0%, 0) 50%, hsla(0, 0%, 0%, 0) 75%, hsl(0, 0%, 14%) 75%, hsl(0, 0%, 14%));
-background-color: hsl(0, 0%, 7%);
--webkit-background-size: 20px 20px;
--moz-background-size: 20px 20px;
--o-background-size: 20px 20px;
-background-size: 20px 20px;
 }
 
 // Code highlighting only effects the current slide.
