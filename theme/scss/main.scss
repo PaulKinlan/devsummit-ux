@@ -65,8 +65,10 @@ slides > slide {
       border-top: $display-color solid 5px;
       
       &:before {
-        font: 24px/1em 'Glyphicons Regular';
+        font: 48px/1em 'Glyphicons Regular';
         content:'\E164';
+        float: left;
+        padding-bottom: 5px;
         background-color: $display-color;
       }
     }
@@ -75,8 +77,10 @@ slides > slide {
       border-top: $interaction-color solid 5px;
       
       &:before {
-        font: 24px/1em 'Glyphicons Regular';
+        font: 48px/1em 'Glyphicons Regular';
         content:'\E349';
+        float: left;
+        padding-bottom: 10px;
         background-color: $interaction-color;
       }
     }

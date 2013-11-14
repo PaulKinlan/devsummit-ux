@@ -9,7 +9,7 @@ URL: https://code.google.com/p/io-2012-slides
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mobile UX</title>
+  <title>Mobile Web UX</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
@@ -21,7 +21,7 @@ URL: https://code.google.com/p/io-2012-slides
   <link rel="stylesheet" media="all" href="theme/css/glyphicons.css" />
   <!--<link rel="stylesheet" media="all" href="theme/css/nexus-r-frame.css" />
   <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
-  <link rel="stylesheet" media="all" href="theme/css/custom.css" />
+  <link rel="stylesheet" media="all" href="theme/css/custom.css" /> -->
   <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
   <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
 </head>
@@ -56,12 +56,9 @@ URL: https://code.google.com/p/io-2012-slides
       <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
       <p data-config-presenter><!-- populated from slide_config.json --></p>
     </hgroup>
-    <aside class="note">
-      <!-- notes -->
-    </aside>
   </slide>
   
-  <slide class="center-column buildingblocks">
+  <slide class="center-column">
     <article>
       <h1>Paul Kinlan</h1>
       <img src="images/paul.jpg" style="margin: 10px; width: 256px; height: 256px; float: left;  border-radius: 10px; box-shadow: 0 0 10px black;"><br><br><br>
@@ -77,45 +74,51 @@ URL: https://code.google.com/p/io-2012-slides
     </article>
   </slide>
 
-  <slide class="center-column clear">
-    <video class=demo poster="images/poster.png" loop muted>
-      <source src="videos/polymer.webm">
-    </video>
-     <article>
+  <slide>
+    <article>
+       <video class=demo poster="images/poster.png" loop muted>
+         <source src="videos/polymer.webm">
+       </video>
        <h1>Polymer</h1>
     </article>
   </slide>
   
-  <slide class="center-column clear">
-    <video class=demo poster="images/poster.png" loop muted>
-      <source src="videos/voice.webm">
-    </video>
-     <article>
+  <slide>
+    <article>
+       <video class=demo poster="images/poster.png" loop muted>
+         <source src="videos/voice.webm">
+       </video>
        <h1>Voice</h1>
     </article>
   </slide>
   
-  <slide class="segue clear">
-    <video class=demo poster="images/poster.png" loop muted>
-      <source src="videos/cards.webm">
-    </video>
+  <slide>
+    <article>
+      <video class=demo poster="images/poster.png" loop muted>
+      <source src="videos/audible.webm">
+      </video>
+      <h1>Audible feedback</h1>
+    </article>
+  </slide>
+  
+  <slide>
      <article>
+       <video class=demo poster="images/poster.png" loop muted>
+         <source src="videos/cards.webm">
+       </video>
        <h1>Cards</h1>
     </article>
   </slide>
   
-  <slide class="segue clear">
-      <video class=demo poster="images/poster.png" loop muted>
-        <source src="videos/audible.webm">
-      </video>
-     <article>
-       <h1>Audible feedback</h1>
-    </article>
-  </slide>
-
   <slide class="center-column segue clear">
     <article>
-      <h1>50% had a mobile experience</h1>
+      <h1>But there is something more important to talk about</h1>
+    </article>
+  </slide>
+  
+  <slide class="center-column segue clear">
+    <article>
+      <h1>47% had a mobile experience</h1>
     </article>
   </slide>
   
@@ -127,13 +130,13 @@ URL: https://code.google.com/p/io-2012-slides
   
   <slide class="center-column segue clear">
      <article>
-       <h1>X% had hard to touch tap targets</h1>
+       <h1>83% had hard to touch tap targets</h1>
     </article>
   </slide>
   
   <slide class="center-column segue clear">
      <article>
-       <h1>X% had readable text</h1>
+       <h1>40% had text readability</h1>
     </article>
   </slide>
   
@@ -267,10 +270,6 @@ URL: https://code.google.com/p/io-2012-slides
     </article>
   </slide>
   
-  <slide class="center-column display">
-     <article><h1>Demo</h1></article>
-  </slide>
-  
   <slide class="fill segue nobackground" style="background-image: url(images/30inch.jpg);">
     <article><h1>Who has a 24 inch phone?</h1></article>
   </slide>
@@ -364,13 +363,24 @@ URL: https://code.google.com/p/io-2012-slides
           <li>if score > (0.5 * best score) on more than two targets then show disambiguator.
             | padding = 32 / 2
             | (16 - (8)) * (1/16)
-            
-            
-            
+           <li> 62 pixels.
+         
             padding > ( tap target distance.)
         </ul>
      </article>
   </slide>
+  
+  <slide class="center-column interaction">
+     <article>
+       <img src="images/touchtarget.png">
+     </article>
+    </slide>
+  
+  <slide class="center-column interaction">
+    <article>
+      <img src="images/touchtarget2.png">
+    </article>
+   </slide>
   
   <slide class="interaction">
       <article>
@@ -581,6 +591,11 @@ URL: https://code.google.com/p/io-2012-slides
          <h1>Correctly sized content</h1>
         <pre class="prettyprint">&lt;meta name="viewport"
   content="width=device-width"&gt;</pre>
+        <ul>
+          <li>Only works when content fits viewport
+          <li>Double tap to zoom disabled
+          <li>Double tap to zoom disabled
+        </ul>
       </article>
     </slide>
     
