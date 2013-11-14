@@ -69,20 +69,44 @@
     list-style-type: none;
   
     li {
-    
+     width: 400px;
+     margin-bottom:1em;
      img {
           width: 4rem;
           height: 4rem;
-
           padding: 1rem;
+      }
+      
+      .glyphicons {
+        padding: 0;
+      }
+      
+      .glyphicons:before {
+        padding: 0;
+        position: static;
+        vertical-align: top;
+      }
+      
+      span {
+        background-color: $bg-color;
+        padding-left: 15px;
+        display:block;
+        float: right;
+        width: 321px;
+      }
+      
+      i:before {
+        font-size: 48px;
       }
     
       &.display {
         border-bottom: $display-color 5px solid;
+        background-color: $display-color;
       }
       
       &.interaction {
         border-bottom: $interaction-color 5px solid;
+        background-color: $interaction-color;
       }
     }
   }

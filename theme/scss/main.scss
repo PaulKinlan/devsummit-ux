@@ -29,6 +29,17 @@ slides > slide {
     box-sizing: border-box;
     opacity: 0;
     
+    h1 {
+      margin-bottom: 1em;
+    }
+    
+    q {
+      margin: 1em;
+      padding: 2em;
+      font-size: 3em;
+      font-style: italic;
+    }
+    
     &.fill {
       background-size: cover;
     }
@@ -52,10 +63,22 @@ slides > slide {
     
     &.display {
       border-top: $display-color solid 5px;
+      
+      &:before {
+        font: 24px/1em 'Glyphicons Regular';
+        content:'\E164';
+        background-color: $display-color;
+      }
     }
     
     &.interaction {
       border-top: $interaction-color solid 5px;
+      
+      &:before {
+        font: 24px/1em 'Glyphicons Regular';
+        content:'\E349';
+        background-color: $interaction-color;
+      }
     }
 
     article {
@@ -64,13 +87,13 @@ slides > slide {
         
         p {
           margin-top: 1em;
-          font-size: 16pt;
+          font-size: 2m;
           line-height: 1.1em;
         }
         
         ul {
-          margin-top: 1em;
-          font-size: 16pt;
+          margin: 1em 0 1em 1em;
+          font-size: 2em;
         }
     }
 
