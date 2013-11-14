@@ -1,0 +1,48 @@
+.nexus-5-frame-port {
+    width: 533px;
+    height: 300px;
+
+    padding: 36px 119px 54px 108px;
+    overflow: hidden;
+
+    background-image: url('./../images/nexus-5-frame-port.png');
+    background-repeat: no-repeat;
+
+    video {
+        width: 533px;
+        height: 300px;
+    }
+}
+
+.nexus-5-frame-land {
+    $nexus-5-img-width: 2857px;
+    $nexus-5-img-height: 1690px;
+    $nexus-5-left-padding: 436px;
+    $nexus-5-right-padding: 501px;
+    $nexus-5-top-padding: 380px;
+    $nexus-5-bottom-padding: 304px;
+
+    display: block;
+
+    width: $nexus-5-img-width;
+    min-width: $nexus-5-img-width;
+    height: $nexus-5-img-height;
+    min-height: $nexus-5-img-height;
+
+    padding: $nexus-5-top-padding
+        $nexus-5-right-padding
+        $nexus-5-bottom-padding
+        $nexus-5-left-padding;
+    overflow: hidden;
+
+    background-image: url('./../images/nexus-5-frame-land.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    box-sizing: border-box;
+
+    video {
+        width: 533px;
+        height: 300px;
+    }
+}

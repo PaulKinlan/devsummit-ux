@@ -1,0 +1,27 @@
+slide.title-slide {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+
+    background-color: $blue-color;
+
+    article {
+        display: flex;
+
+        flex-direction: column;
+        justify-content: center;
+
+        flex: 1;
+    }
+
+    .author-link {
+        padding-top: $slide-padding;
+
+        font-size: 1.5rem;
+    }
+
+    .author-link:last-of-type {
+        padding-bottom: $slide-padding;
+    }
+}

@@ -1,0 +1,151 @@
+@import "values";
+@import "base";
+@import "slide_title";
+@import "slide_author";
+@import "slide_center_column";
+@import "nexus_5_frame";
+@import "slides_custom";
+
+
+
+slides {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000;
+  transform-style: preserve-3d;
+  transition: opacity 800ms ease-in 100ms; // Add small delay to prevent jank.
+}
+
+slides > slide {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    opacity: 0;
+    
+    &.fill {
+      background-size: cover;
+    }
+    
+    aside {
+      &.note {
+        display: none;
+      }
+    }
+    
+    video {
+      &.demo {
+        float: right;
+        width: 380px;
+      }
+    }
+    
+    &.buildingblocks {
+      border-top: $display-color solid 5px;
+    }
+    
+    &.display {
+      border-top: $display-color solid 5px;
+    }
+    
+    &.interaction {
+      border-top: $interaction-color solid 5px;
+    }
+
+    article {
+        padding: $slide-padding;
+        box-sizing: border-box;
+        
+        p {
+          margin-top: 1em;
+          font-size: 16pt;
+          line-height: 1.1em;
+        }
+        
+        ul {
+          margin-top: 1em;
+          font-size: 16pt;
+        }
+    }
+
+    .content {
+        display: flex;
+
+        width: 100%;
+        align-items: center;
+
+        flex-direction: column;
+        justify-content: center;
+
+        flex: 1;
+    }
+
+    &.far-past {
+        display: none;
+    }
+
+    &.past {
+        opacity: 0;
+    }
+
+    &.current {
+        opacity: 1;
+        z-index: 9999;
+    }
+
+    &.next {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &.far-next {
+        display: none;
+    }
+
+    &.section-slide {
+        &.display {
+          background-color: $display-color;
+          h1 {
+              font-size: 6rem;
+          }
+        }
+        
+        &.interaction {
+          background-color: $interaction-color;
+          h1 {
+              font-size: 6rem;
+          }
+        }
+    }
+    
+     &.question-slide {
+        h1 {
+          font-size: 6rem;
+          background-color: rgba(0,0,0,0.4);
+          background-size: contain;
+        }
+      }
+}
+
+.prettyprint {
+    white-space: pre-wrap;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.5);
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0.5);
+
+    b {
+        color: rgba(255, 255, 255, 1.0);
+    }
+
+    &.force-full {
+        color: rgba(255, 255, 255, 1.0);
+    }
+}
