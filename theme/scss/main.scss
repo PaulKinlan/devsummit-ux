@@ -140,6 +140,7 @@ slides > slide {
           background-color: $display-color;
           h1 {
               font-size: 6rem;
+             
           }
         }
         
@@ -149,6 +150,37 @@ slides > slide {
               font-size: 6rem;
           }
         }
+    }
+    
+    &.fill {
+      &.display:before {
+        display: none;
+      }
+      
+      &.interaction:before {
+        display: none;
+      }
+    
+      &.display {
+        border: none;
+        
+        h1 {
+          background-color: $display-color;
+          display: inline;
+          padding:5px
+        }
+      }
+      
+      &.interaction {
+        border: none;
+      
+        h1 {
+          background-color: $interaction-color;
+          display: inline;
+          padding:5px
+        }
+      }
+    
     }
     
      &.question-slide {

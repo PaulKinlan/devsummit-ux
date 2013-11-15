@@ -138,7 +138,7 @@ URL: https://code.google.com/p/io-2012-slides
   
   <slide class="center-column section-slide">
      <article>
-       <h1>We need to get the fundamentals correct</h1>
+       <h1>Understand the fundamentals</h1>
     </article>
   </slide>
   
@@ -273,7 +273,7 @@ URL: https://code.google.com/p/io-2012-slides
     </article>
   </slide>
   
-  <slide class="fill segue nobackground" style="background-image: url(images/30inch.jpg);">
+  <slide class="fill nobackground display" style="background-image: url(images/30inch.jpg); background-position: 0 -350px;">
     <article><h1>Who has a 24 inch phone?</h1></article>
   </slide>
     
@@ -474,18 +474,20 @@ URL: https://code.google.com/p/io-2012-slides
       </article>
     </slide>
   
-  <slide class="section-slide fill nobackground" style="background-image: url(/images/queue.jpg); background-position: 0px -400px;">
+  <slide class="section-slide fill nobackground interaction" style="background-image: url(/images/queue.jpg); background-position: 0px -400px;">
      <article>
-       <h1 style="background-color: rgba(0,0,0,0.4)">Who likes waiting in a queue?</h1>
+       <h1>Who likes waiting in a queue?</h1>
     </article>
   </slide>
     
   <slide class="interaction">
     <article>
       <video class=demo poster="images/poster.png" loop muted>
-        <source src="videos/sizedcontent.webm"></source>
+        <source src="videos/touchevents.webm"></source>
       </video>
        <h1>300ms click delay</h1>
+       <ul>
+       </ul>
     </article>
   </slide>
   
@@ -566,11 +568,10 @@ URL: https://code.google.com/p/io-2012-slides
            <source src="videos/sizedcontent.webm"></source>
          </video>
          <h1>Correctly sized content</h1>
-        <pre class="prettyprint">&lt;meta name="viewport"
-  content="width=device-width"&gt;</pre>
+         <pre class="prettyprint">&lt;meta name="viewport"
+      content="width=device-width"&gt;</pre>
         <ul>
           <li>Only works when content fits viewport
-          <li>Double tap to zoom disabled
           <li>Double tap to zoom disabled
         </ul>
       </article>
@@ -578,28 +579,18 @@ URL: https://code.google.com/p/io-2012-slides
     
    
     
-  <slide class="question-slide segue nobackground" style="background-image: url(images/typingcrop.jpeg);">
+  <slide class="segue nobackground fill interaction" style="background-image: url(images/typingcrop.jpeg);">
     <article><h1>Who loves typing on a phone?</h1></article>
   </slide>
   
   
-  <slide class="question-slide segue nobackground">
-    <article><q>I love typing on a phone.</q> &mdash; No one ever.</article>
-   
-  </slide>
-  
-   <slide class="interaction">
-       <article>
-         <h1>Minimize typing</h1>
-         <div class="content">
-        <ul>
-          <li>Use semantic input types
-          <li>Take advantage of autocomplete
-          <li>Automate form submission with requestAutocomplete
-        </ul>
-        </div>
+  <slide class="center-column interaction">
+    <article>
+      <div><q>I love typing on a phone.</q> &mdash; No one ever.</div>
+      <br><br>
+      <h2>Minimize typing</h2>
       </article>
-    </slide>
+  </slide>
   
     <slide class="interaction">
       <article>
@@ -607,7 +598,10 @@ URL: https://code.google.com/p/io-2012-slides
           <source src="videos/input.webm"></source>
         </video>
         <h1>Semantic input types</h1>
-        <h3>Specialized on-screen keyboards</h3>
+        <h2>Specialized on-screen keyboards</h2>
+        <ul>
+          <li>Increases accuracy
+        </ul>
         <pre class="prettyprint" data-lang="html">&lt;input <b>type="email"</b> /&gt;
 &lt;input <b>type="search"</b> /&gt;
 &lt;input <b>type="url"</b> /&gt;
@@ -707,22 +701,13 @@ form.addEventListener('autocompleteerror', function(){
   <slide class="title-slide segue blue">
      <article>
        <h1>Wrapping up</h1>
-      <ul class="build">
-        <h1 class="build" style="margin-bottom: 20px;">We can:</h1>
-        <li class="build">Detect problems before they arise
-        <li class="build">Configure a sane viewport
-        <li class="build">Size content to the viewport
-        <li class="build">Make text readable
-        <li class="build">Reduce the amount of input
-        <li class="build">Ensure consistent tap targets
-        <li class="build">Give us feed back!</li>
-      </ul>
+       <h2>Detect problems before they arise</h2>
     </article>
   </slide>
   
   <slide class="center-column section-slide">
      <article>
-       <h1>Please Test</h1>
+       <h1>We love feedback!</h1>
        <h2>developers.google.com/speed/pagespeed/insights/</h2>
        <a href="https://developers.google.com/speed/pagespeed/insights/internal/?rules=uselegiblefontsizes%2Csizetaptargetsappropriately%2Cavoidplugins%2Cconfigureviewport&url=google.com%2Fsearch%3Fq%3Dflowers"><img src="images/pagespeedux.png"></a>
     </article>
