@@ -319,11 +319,11 @@ SlideDeck.prototype.loadConfig_ = function(config) {
     if (settings.eventTitle) {
       document.title +=  ' - ' + settings.eventTitle;
     }
-    document.querySelector('[data-config-title]').innerHTML = settings.title;
+    //document.querySelector('[data-config-title]').innerHTML = settings.title;
   }
 
   if (settings.subtitle) {
-    document.querySelector('[data-config-subtitle]').innerHTML = settings.subtitle;
+    //document.querySelector('[data-config-subtitle]').innerHTML = settings.subtitle;
   }
 
   if (this.config_.presenters) {

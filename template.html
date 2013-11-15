@@ -49,13 +49,7 @@ URL: https://code.google.com/p/io-2012-slides
 <slides class="layout-widescreen">
 
   <slide class="title-slide segue nobackground">
-    <aside class="gdbar"><img src="images/chrome_logo.png"></aside>
-    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
-    <hgroup class="auto-fadein">
-      <h1 data-config-title><!-- populated from slide_config.json --></h1>
-      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
-      <p data-config-presenter><!-- populated from slide_config.json --></p>
-    </hgroup>
+    <article><img src="images/chrome_logo.png"></article>
   </slide>
   
   <slide class="center-column">
@@ -68,87 +62,83 @@ URL: https://code.google.com/p/io-2012-slides
     </article>
   </slide>
   
-  <slide class="center-column section-slide red">
+  <slide class="center-column section-slide">
      <article>
        <h1>Why Mobile Web UX at a dev conference?</h1>
     </article>
   </slide>
 
-  <slide>
+  <!--<slide class="fill segue nobackground center-column section-slide" style="background-image: url(images/hugephone.jpg); background-position: 200px;">
     <article>
-       <video class=demo poster="images/poster.png" loop muted>
-         <source src="videos/polymer.webm">
-       </video>
-       <h1>Polymer</h1>
+       <h1>Mobiles are Big</h1>
+       
+       <p>MrBeck: http://www.flickr.com/photos/mrbeck/271556588</p>
     </article>
-  </slide>
+  </slide>-->
   
-  <slide>
+  <slide class="fill segue nobackground center-column section-slide" style="background-image: url(images/mobilegrowth.png);">
     <article>
-       <video class=demo poster="images/poster.png" loop muted>
-         <source src="videos/voice.webm">
-       </video>
-       <h1>Voice</h1>
-    </article>
-  </slide>
-  
-  <slide>
-    <article>
-      <video class=demo poster="images/poster.png" loop muted>
-      <source src="videos/audible.webm">
-      </video>
-      <h1>Audible feedback</h1>
+       <h1>Mobile is Huge</h1>
+       <h2>TODO: better image.</h2>
     </article>
   </slide>
   
   <slide>
      <article>
-       <video class=demo poster="images/poster.png" loop muted>
-         <source src="videos/cards.webm">
-       </video>
-       <h1>Cards</h1>
+       <h1>Some leading examples</h1>
+       [todo show some great sites]
+       <ul>
+        <li>bbc
+        <li>forecast.io
+        <li>and others.
+       </ul>
     </article>
   </slide>
   
   <slide class="center-column segue clear">
     <article>
-      <h1>But there is something more important to talk about</h1>
+      <h1>But...</h1>
     </article>
   </slide>
   
   <slide class="center-column segue clear">
     <article>
-      <h1>47% had a mobile experience</h1>
+      <h1>53% had a desktop experience</h1>
+      <img src="images/desktop.png" style="width: 300px">
     </article>
   </slide>
   
   <slide class="center-column segue clear">
      <article>
        <h1>25% didn’t fit in on screen</h1>
+       <img src="images/fitviewport.png" style="width: 300px">
     </article>
   </slide>
   
   <slide class="center-column segue clear">
      <article>
-       <h1>83% had hard to touch tap targets</h1>
+       <h1>83% have hard to touch tap targets</h1>
+       <img src="images/touchtargets.png" style="width: 300px">
     </article>
   </slide>
   
   <slide class="center-column segue clear">
      <article>
-       <h1>40% had text readability</h1>
+       <h1>60% have text readability issues</h1>
+       <img src="images/readability.png" style="width: 300px">
     </article>
   </slide>
   
   <slide class="center-column segue clear">
      <article>
-       <h1>10% used Flash</h1>
+       <h1>10% used Plugins</h1>
+       <img src="images/plugins.png" style="width: 300px">
     </article>
   </slide>
   
   <slide class="center-column section-slide">
      <article>
-       <h1>To help you we are showing you a beta tool</h1>
+       <h1>We need to get the fundamentals correct</h1>
     </article>
   </slide>
   
@@ -158,9 +148,11 @@ URL: https://code.google.com/p/io-2012-slides
     </article>
   </slide>
   
-  <slide class="center-column section-slide">
+  <slide class="fill segue nobackground center-column section-slide" style="background-image: url(images/buildingblocks.jpg);">
      <article>
-       <h1>Mobile Web UX building blocks</h1>
+       <h1 style="background-color: #34495E;">Mobile Web UX building blocks</h1>
+       
+       <p><a href="http://www.flickr.com/photos/51385424@N00/2253657555">Picture: Eran Sandler - http://www.flickr.com/photos/51385424@N00/2253657555</a></p>
     </article>
   </slide>
   
@@ -191,9 +183,8 @@ URL: https://code.google.com/p/io-2012-slides
       <pre class="prettyprint">&lt;meta name="viewport" content="width=<b>device-width</b>" /&gt;</pre>
       <h3>Initial scale:</h3>
       <pre class="prettyprint">&lt;meta name="viewport" content="initial-scale=<b>1.0</b>" /&gt;</pre>
-      <pre class="additional-margin-top prettyprint">&lt;meta name="viewport"
-  content="width=<b>device-width</b>, initial-scale=<b>1.0</b>" /&gt;</pre>
-  
+      <h3>Warning<h3>
+      <p>Don't use a fixed viewport<p>
       <p>
         Demo: <a href="http://goo.gl/j9KLT">goo.gl/j9KLT</a>
       </p>
@@ -230,15 +221,20 @@ URL: https://code.google.com/p/io-2012-slides
     </article>
   </slide>
   
-  <slide class="center-column display">
+  <slide class="display">
      <article>
+       <img src="images/fontboosting2.png" style="width: 642px; height: 638px; float:right">
        <h1>It's all a lie</h1>
        <h2>Browser's boost fonts</h2>
        <h2>And ruin your designs</h3>
+       
+       <ul>
+         <li>Use a viewport
+       </ul>
     </article>
   </slide>
 
-  <slide class="display">
+ <!-- <slide class="display">
     <article>
       <h1 class="tomorrow">Device Adaptation</h1>
 	  <h3>A saner solution is on it's way!</h3>
@@ -255,7 +251,7 @@ URL: https://code.google.com/p/io-2012-slides
   }
 }</pre>
     </article>
-  </slide>
+  </slide>-->
   
   <slide class="display">
     <article>
@@ -267,6 +263,13 @@ URL: https://code.google.com/p/io-2012-slides
         <li>It drives users crazy
         <li>Some platforms have scroll lock
       </ul>
+    </article>
+  </slide>
+  
+  <slide class="center-column section-slide">
+     <article>
+       <h1>Viewport demo</h1>
+       <a href="https://developers.google.com/speed/pagespeed/insights/internal/?rules=uselegiblefontsizes&url=http://news.ycombinator.com/"><img src="images/pagespeedux.png"></a>
     </article>
   </slide>
   
@@ -291,13 +294,22 @@ URL: https://code.google.com/p/io-2012-slides
   <slide class="center-column display">
     <article>
         <h1>HTML5Rocks redesign</h1>
+        <div class="content" style="flex-direction: row;">
+          <img src="/images/h5rold.png" style="width: 360px; height: 640px; margin: 5px;">
+          <img src="/images/h5rnew.png" style="width: 360px; height: 640px; margin: 5px;">
+        </div>
     </article>
   </slide>
   
   <slide class="display">
       <article>
-        <h1>Size to content not to device</h1>
-       <p>Less maintenance</p>
+       <h1>Size to content not to device</h1>
+       <h2>Less maintenance</h2>
+       <ul>
+         <li>No need to guess about device support
+         <li>From 17 media queries to <b>4</b> 
+       </ul>
+       [todo add image of resizing content.]
      </article>
   </slide>
   
@@ -307,9 +319,13 @@ URL: https://code.google.com/p/io-2012-slides
          <source src="videos/fontreadability.webm"></source>
        </video>
        <h1>Font readability</h1>     
-       <q>If users can’t read the words in your app, it doesn’t matter how beautiful the typography is - Apple</q>
+       <q>If users can’t read the words in your app, it doesn’t matter how beautiful the typography is</q> &mdash; Apple
        <ul>
         <li>Minimum 12pt
+        <ul>
+          <li>1 em
+          <li>16 px
+        </ul>
         <li>Increased contrast
        </ul>
      </article>
@@ -321,8 +337,19 @@ URL: https://code.google.com/p/io-2012-slides
           <source src="videos/webfonts.webm"></source>
         </video>
         <h1>Limit use of Web Fonts</h1>
-        <p></p>
+        <h2>FOUC</h2>
+        <ul>
+          <li>Use for headings
+          <li>Avoid body text
+        </ul>
      </article>
+  </slide>
+  
+  <slide class="center-column section-slide">
+     <article>
+       <h1>Font Legibility demo</h1>
+       <a href="https://developers.google.com/speed/pagespeed/insights/internal/?rules=uselegiblefontsizes&url=http://news.ycombinator.com/"><img src="images/pagespeedux.png"></a>
+    </article>
   </slide>
    
   <slide class="center-column section-slide interaction">
@@ -351,6 +378,7 @@ URL: https://code.google.com/p/io-2012-slides
           <source src="videos/magnify.webm"></source>
         </video>
         <h1>Click disambiguation</h1>
+        [EDITORS: DON'T READ THIS.  THEY ARE MY NOTES.  THEY WONT BE IN FINAL SLIDES]
         <p>Learn more: <a href="http://goo.gl/0CEFgw">goo.gl/0CEFgw</a></p>
         <ul>
           <li>tap target box
@@ -374,13 +402,13 @@ URL: https://code.google.com/p/io-2012-slides
      <article>
        <img src="images/touchtarget.png">
      </article>
-    </slide>
+  </slide>
   
   <slide class="center-column interaction">
     <article>
       <img src="images/touchtarget2.png">
     </article>
-   </slide>
+  </slide>
   
   <slide class="interaction">
       <article>
@@ -388,6 +416,7 @@ URL: https://code.google.com/p/io-2012-slides
           <source src="videos/taptargets.webm"></source>
         </video>
         <h1>Tap Targets</h1>
+        [TODO:VIDEO will show sizes as per each recomendation.]
         <h2>Minimum target Recommendations</h2>
         <ul>
          <li>iOS: 44 pts
@@ -395,16 +424,12 @@ URL: https://code.google.com/p/io-2012-slides
          <li>Microsoft: 23 DLG
         </ul>
         <h2>But what do they mean in web terms?</h2>
-        <ul class=build>
-          <li class=build>iOS: 1 pt (1/76th of an inch)
-          <li class=build>Android: 1 dips (1px at 160dpi)
-          <li class=build>Microsoft: 1 DLG (Who knows?)
+        <ul>
+          <li>iOS: 1 pt (1/76th of an inch)
+          <li>Android: 1 dips (1px at 160dpi)
+          <li>Microsoft: 1 DLG (Who knows?)
         </ul>
     </article>
-    <aside class="note">
-      <p>Padding is part of the tappable area.</p>
-      <p>Quite easy when you have a viewport.</p>
-    </aside>
   </slide>
     
   <slide class="interaction">
@@ -413,12 +438,12 @@ URL: https://code.google.com/p/io-2012-slides
            <source src="videos/taptargets.webm"></source>
          </video>
          <h1>Tap Targets - In the real world</h1>
+         <h2>1 CSS px is 1/96in</h2>
         <ul>
-         <li>Increase target size (7mm)
-         <li>Increase margin (5mm minimum)
-         <li>Increase padding
+         <li>Increase target size: (26 CSS pixels - 26/96 == 7mm)
+         <li>Increase margin: (8 CSS Pixels - 8/96 == 2mm)
         </ul>
-        
+        [TODO:  Add diagram showing spacing.]
         <p>You can actually get away with smaller.</p>
      </article>
    </slide>
@@ -429,53 +454,25 @@ URL: https://code.google.com/p/io-2012-slides
           <source src="videos/taptargetslabel.webm"></source>
         </video>
         <h1>Form inputs</h1>
-       <h2>Use &lt;label for="elementid"&gt;</h>
+        <h2>Same spacing rules</h2>
+        <h2>Use &lt;label for="elementid"&gt;</h2>
        <pre class="prettyprint">&lt;form method="post">
-  &lt;label for="fname">First name:&lt;/label>
+  <b>&lt;label for="fname">First name:&lt;/label></b>
   &lt;input type="text" name="fname" id="fname" />
-  &lt;label for="lname">Last name:&lt;/label>
+  <b>&lt;label for="lname">Last name:&lt;/label></b>
   &lt;input type="text" name="lname" id="lname"/>
-  &lt;label for="email">E-mail:&lt;/label>
+  <b>&lt;label for="email">E-mail:&lt;/label></b>
   &lt;input type="text" name="email" id="email" />
-  &lt;label for="phone">Phone:&lt;/label>
-  &lt;input type="text" name="phone" id="phone" />
-  &lt;label for="address">Address:&lt;/label>
-  &lt;input type="text" name="address" id="address" />
 &lt;/form></pre>
      </article>
   </slide>
   
-  <slide class="interaction">
-      <article>
-        <video class=demo poster="images/poster.png" loop muted>
-          <source src="videos/taptargetsnoviewport.webm"></source>
-        </video>
-        <h1>Tap Targets without a viewport</h1>
-
-       <ul>
-        <li>N4 - 39% of the size
-        <li>N5 - 37% of the size
-        <li>... You get the idea.
-       </ul>
-       
-       <ul>
-         <li>Everything becomes impossible to touch
-       </ul>
-    </article>
-    <aside class="note">
-      <p>This is why it is so important</p>
-      <p>Quite easy when you have a viewport.</p>
-    </aside>
-  </slide>
-  
-  <slide class="interaction">
-      <article>
-        <video class=demo poster="images/poster.png" loop muted>
-           <source src="videos/viewportsize.webm"></source>
-         </video>
-        <h1>Size content</h1>
-    </article>
-  </slide>
+   <slide class="center-column section-slide">
+       <article>
+         <h1>Touch target demo</h1>
+         <a href="https://developers.google.com/speed/pagespeed/insights/internal/?rules=uselegiblefontsizes&url=http://news.ycombinator.com/"><img src="images/pagespeedux.png"></a>
+      </article>
+    </slide>
   
   <slide class="section-slide fill nobackground" style="background-image: url(/images/queue.jpg); background-position: 0px -400px;">
      <article>
@@ -519,17 +516,11 @@ URL: https://code.google.com/p/io-2012-slides
     </article>
   </slide>
   
-  <slide class="section-slide center-column interaction">
-     <article class="">
-       <h1>3 Billions requests per day</h1>
-     </article>
-   </slide>
-  
    <slide class="section-slide center-column interaction">
        <article>
          <h1>1,400 request per second</h1>
        </article>
-     </slide>
+   </slide>
      
    <slide class="section-slide center-column interaction">
       <article>
@@ -540,25 +531,11 @@ URL: https://code.google.com/p/io-2012-slides
     
     <slide class="section-slide center-column interaction">
          <article>
-          <h1>36,547,200 seconds wasted every day = 1 year
-          </h1>
+          <h1>1 year wasted every day</h1>
+          <h2>(36,547,200 seconds)</h2>
         </article>
       </slide>
       
-  <slide class="section-slide center-column interaction">
-       <article>
-        <h1>36,547,200 seconds wasted every day = 1 year</h1>
-      </article>
-    </slide>
-    
-    <slide class="section-slide center-column interaction">
-       <article>
-        <h1>1 year</h1>
-        http://mashable.com/2013/08/20/mobile-web-traffic/
-      </article>
-    </slide>
-    
-    
    <slide class="center-column interaction">
     <article>
       <h1>Chrome is removing 300ms delay</h1>
@@ -599,26 +576,15 @@ URL: https://code.google.com/p/io-2012-slides
       </article>
     </slide>
     
-    <slide class="interaction">
-      <article>
-        <video class=demo poster="images/poster.png" loop muted>
-          <source src="videos/touchevents.webm"></source>
-        </video>
-        <h1>Touch Events</h1>
-
-        <p>Todo: content change</p>
-        <h3>Handle the visitor's touches</h3>
-        <pre class="prettyprint" data-lang="javascript">[element].ontouchstart = function(event) {};
-[element].ontouchmove = function(event) {};
-[element].ontouchend = function(event) {};</pre>
-        <p>Docs: <a href="http://goo.gl/8ybb5">goo.gl/8ybb5</a></p> 
-        <p>Demo: <a href="http://goo.gl/ZwOzk" target="_blank">goo.gl/ZwOzk</a></p>
-      </article>
-
-    </slide>
+   
     
   <slide class="question-slide segue nobackground" style="background-image: url(images/typingcrop.jpeg);">
     <article><h1>Who loves typing on a phone?</h1></article>
+  </slide>
+  
+  
+  <slide class="question-slide segue nobackground">
+    <article><q>I love typing on a phone.</q> &mdash; No one ever.</article>
    
   </slide>
   
@@ -642,15 +608,15 @@ URL: https://code.google.com/p/io-2012-slides
         </video>
         <h1>Semantic input types</h1>
         <h3>Specialized on-screen keyboards</h3>
-        <pre class="prettyprint" data-lang="html">&lt;input type="email" /&gt;
-&lt;input type="search" /&gt;
-&lt;input type="url" /&gt;
-&lt;input type="tel" /&gt;
-&lt;input type="number" /&gt;
-&lt;input type="date" /&gt;
-&lt;input type="week" /&gt;
-&lt;input type="month" /&gt;
-&lt;input type="datetime-local" /&gt;</pre>
+        <pre class="prettyprint" data-lang="html">&lt;input <b>type="email"</b> /&gt;
+&lt;input <b>type="search"</b> /&gt;
+&lt;input <b>type="url"</b> /&gt;
+&lt;input <b>type="tel"</b> /&gt;
+&lt;input <b>type="number"</b> /&gt;
+&lt;input <b>type="date"</b> /&gt;
+&lt;input <b>type="week"</b> /&gt;
+&lt;input <b>type="month"</b> /&gt;
+&lt;input <b>type="datetime-local"</b> /&gt;</pre>
         <p>Demo: <a href="http://goo.gl/CNMp6" target="_blank">goo.gl/CNMp6</a></p>
       </article>
     </slide>
@@ -664,12 +630,13 @@ URL: https://code.google.com/p/io-2012-slides
 
           <h3>Hints to the browser</h3>
           <pre class="prettyprint" data-lang="html">&lt;form method="post">
-  First name:&lt;input type="text" <strong>name="fname"</strong> />
-  Last name: &lt;input type="text" name="lname" />
-  E-mail: &lt;input type="text" name="email" />
-  Phone: &lt;input type="text" name="phone" />
-  Address: &lt;input type="text" name="address" />
+  First name:&lt;input type="text" <b>name="fname"</b> />
+  Last name: &lt;input type="text" <b>name="lname"</b> />
+  E-mail: &lt;input type="text" <b>name="email"</b> />
+  Phone: &lt;input type="text" <b>name="phone"</b> />
+  Address: &lt;input type="text" <b>name="address"</b> />
 &lt;/form></pre>
+   [TODO: get a list of all the autocompletion]
           <p>Demo: <a href="http://goo.gl/CNMp6" target="_blank">goo.gl/CNMp6</a></p>
         </article>
       </slide>
@@ -680,7 +647,7 @@ URL: https://code.google.com/p/io-2012-slides
               <source src="videos/autocomplete.webm"></source>
             </video>
             <h1>Plan for requestAutoComplete</h1>
-            <pre class="prettyprint" data-lang="html">// todo, add feature detect.
+            <pre class="prettyprint" data-lang="html">[todo, add feature detect]
               
 button.addEventListener('click', function(){
   form.requestAutocomplete();
@@ -700,6 +667,23 @@ form.addEventListener('autocompleteerror', function(){
             <p>Demo: <a href="http://goo.gl/CNMp6" target="_blank">goo.gl/CNMp6</a></p>
           </article>
         </slide>
+        
+  <slide class="interaction">
+     <article>
+       <video class=demo poster="images/poster.png" loop muted>
+         <source src="videos/interstial.webm"></source>
+       </video>
+       <h1>Remove Plugins</h1>
+       [TODO add stats about plugin usage]
+     </article>
+   </slide>  
+
+  <slide class="center-column section-slide">
+     <article>
+       <h1>Plugin</h1>
+       <a href="https://developers.google.com/speed/pagespeed/insights/internal/?rules=uselegiblefontsizes&url=http://news.ycombinator.com/"><img src="images/pagespeedux.png"></a>
+    </article>
+  </slide>
      
   <slide class="interaction">
      <article>
@@ -746,25 +730,21 @@ form.addEventListener('autocompleteerror', function(){
  
   <slide class="title-slide segue blue">
      <article>
+           <h1>Thank you</h1>
+           <h2>Paul Kinlan</h2>
+           <img src="images/paul.jpg" style="margin: 10px; width: 256px; height: 256px; float: left;  border-radius: 10px; box-shadow: 0 0 10px black;">
+           <p>G+: <a href="http://google.com/+PaulKinlan">google.com/+PaulKinlan</a></p>
+           <p>Twitter: <a href="https://twitter.com/paul_kinlan">@paul_kinlan</a> </p>
+           <p>Blog: <a href="http://paul.kinlan.me">paul.kinlan.me</a> </p>
+
        <h1>Links</h1>
       <ul>
+         <li><a href="http://mobile-ux.appspot.com/">mobile-ux.appspot.com</a></li>
         <li><a href="http://html5rocks.com/mobile">html5rocks.com/mobile</a></li>
       </ul>
     </article>
   </slide>
   
-  
- 
-  <slide class="fin">
-    <aside class="gdbar right"><img src="images/google_developers_icon_128.png"></aside>
-    <article class="flexbox vleft auto-fadein">
-      <p><a href="http://mobile-ux.appspot.com" style="color: white;">mobile-ux.appspot.com</a></p>
-    </article>
-    <p class="auto-fadein" data-config-contact>
-      <!-- populated from slide_config.json -->
-    </p>
-  </slide>
-
   <slide class="backdrop"></slide>
 
 </slides>

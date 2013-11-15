@@ -27,12 +27,6 @@ handlers:
 - url: /images
   static_dir: images
 
-- url: /browser-logos
-  static_dir: blogo
-
-- url: /blogo
-  static_dir: blogo
-
 - url: /videos
   static_dir: videos
   
