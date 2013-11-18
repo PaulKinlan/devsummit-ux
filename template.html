@@ -648,14 +648,15 @@ URL: https://code.google.com/p/io-2012-slides
          <video class=demo poster="images/poster.png" loop muted>
            <source src="videos/sizedcontent.webm"></source>
          </video>
-         <h1>Correctly sized content</h1>
-         <pre class="prettyprint">&lt;meta name="viewport"
-      content="width=device-width"&gt;</pre>
+         <h1>Removing 300ms delay</h1>
+         <h2 class="warning">Double tap to zoom is disabled</h2>
+         
         <ul class="goodbad">
-          <li>Double tap to zoom disabled
           <li class="good">Use a viewport
-          <li class="good">Size conentviewport
-          <li class="good">Use fastclick
+            <pre class="prettyprint">&lt;meta name="viewport"
+      content="<b>width=device-width</b>"&gt;</pre>
+          <li class="good">Size content to viewport
+          <li class="good">Use fastclick if not on Chrome
         </ul>
       </article>
     </slide>
@@ -679,11 +680,9 @@ URL: https://code.google.com/p/io-2012-slides
         <video class=demo poster="images/poster.png" loop muted>
           <source src="videos/input.webm"></source>
         </video>
-        <h1>Semantic input types</h1>
-        <h2>Specialized on-screen keyboards</h2>
-        <ul>
-          <li>Increases accuracy
-        </ul>
+        <h1>Specialized keyboards</h1>
+        <ul class="goodbad">
+          <li class="good">Use semantic types
         <pre class="prettyprint" data-lang="html">&lt;input <b>type="email"</b>&gt;
 &lt;input <b>type="search"</b>&gt;
 &lt;input <b>type="url"</b>&gt;
@@ -693,6 +692,10 @@ URL: https://code.google.com/p/io-2012-slides
 &lt;input <b>type="week"</b>&gt;
 &lt;input <b>type="month"</b>&gt;
 &lt;input <b>type="datetime-local"</b>&gt;</pre>
+</ul>
+<ul>
+  <li>Increases accuracy
+</ul>
         <p>Demo: <a href="http://goo.gl/CNMp6" target="_blank">goo.gl/CNMp6</a></p>
       </article>
     </slide>
@@ -703,7 +706,8 @@ URL: https://code.google.com/p/io-2012-slides
             <source src="videos/autocomplete.webm"></source>
           </video>
           <h1>Take advantage of autocomplete</h1>
-          <h2>Hints to the browser</h2>
+          <ul class="goodbad">
+            <li class="good">Provide hints to the browser
           <pre class="prettyprint" data-lang="html">&lt;form method="post">
   First name:&lt;input type="text" <b>name="fname"</b>>
   Last name: &lt;input type="text" <b>name="lname"</b>>
@@ -711,6 +715,8 @@ URL: https://code.google.com/p/io-2012-slides
   Phone: &lt;input type="text" <b>name="phone"</b>>
   Address: &lt;input type="text" <b>name="address"</b>>
 &lt;/form></pre>
+ <li class="bad">autocomplete="off"
+</ul>
    [TODO: get a list of all the autocompletion]
           <p>Demo: <a href="http://goo.gl/CNMp6" target="_blank">goo.gl/CNMp6</a></p>
         </article>
