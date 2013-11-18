@@ -40,6 +40,20 @@ slides > slide {
       font-style: italic;
     }
     
+    .good:before {
+      font-family: 'Glyphicons Regular';
+      content:'\E207';
+      margin-right: 0.5em;
+      color: lighten(green, 50%);
+    }
+    
+    .bad:before {
+      font-family: 'Glyphicons Regular';
+      content:'\E208';
+      margin-right: 0.5em;
+      color: red;
+    }
+    
     &.fill {
       background-size: cover;
     }
@@ -97,8 +111,25 @@ slides > slide {
         
         ul {
           margin: 1em 0 1em 1em;
-          font-size: 2em;
+          font-size: 2rem;
+          &.goodbad {
+            list-style: none;
+          }
+          
+          &.highlight {
+            color: darken($highlight-color, 50%);
+            
+            li {
+              &.current {
+                color: $highlight-color;
+              }
+
+            }
+          }
+          
+         
         }
+        
     }
 
     .content {
