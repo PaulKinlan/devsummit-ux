@@ -158,7 +158,7 @@ URL: https://code.google.com/p/io-2012-slides
   
   <slide class="fill segue nobackground center-column section-slide" style="background-image: url(images/buildingblocks.jpg);">
      <article>
-       <h1 style="background-color: #34495E;">Mobile Web UX building blocks</h1>
+       <h1 style="background-color: #34495E; padding: 10px;">Mobile Web UX building blocks</h1>
        
        <p><a href="http://www.flickr.com/photos/51385424@N00/2253657555">Picture: Eran Sandler - http://www.flickr.com/photos/51385424@N00/2253657555</a></p>
     </article>
@@ -187,9 +187,7 @@ URL: https://code.google.com/p/io-2012-slides
       <h1>Always use a viewport</h1>
       <h2>The most critical element for mobile!</h2>
       
-      <h3>Device width:</h3>
       <pre class="prettyprint">&lt;meta name="viewport" content="width=<b>device-width</b>" /&gt;</pre>
-      <h3>Initial scale:</h3>
       <pre class="prettyprint">&lt;meta name="viewport" content="initial-scale=<b>1.0</b>" /&gt;</pre>
       
       <ul class="goodbad">
@@ -270,15 +268,16 @@ URL: https://code.google.com/p/io-2012-slides
     
   <slide class="display">
     <article>
+      <video class=demo poster="images/poster.png" loop muted>
+        <source src="videos/cssorientation.webm">
+      </video>
       <h1>Media Queries</h1>
-      <h3>Adaptive to screen size</h3>
+      <h2>Adaptive to screen size</h2>
   	  <pre class="prettyprint">@media screen and (min-width: 800px) { ... }</pre>
 	    <pre class="prettyprint">@media screen and (device-aspect-ratio: 16/9) { ... }</pre>
       <pre class="prettyprint">@media screen and (resolution: 2dppx) { ... }</pre>
-	    <ul>
-        <li>Logically group your styling rules.</li>
-  	    <li>Dynamically responsive</li>
-      </ul>
+      <h2>Adaptive to orientation</h2>
+      <pre class="prettyprint">@media screen and (orientation: portrait) { ... }</pre>
     </article>
    </slide>
    
@@ -288,6 +287,7 @@ URL: https://code.google.com/p/io-2012-slides
         <div class="content" style="flex-direction: row;">
           <img src="/images/h5rold.png" style="width: 360px; height: 640px; margin: 5px;">
           <img src="/images/h5rnew.png" style="width: 360px; height: 640px; margin: 5px;">
+          <h3>From 17 media queries to <b>4</b></h3>
         </div>
     </article>
   </slide>
@@ -296,10 +296,10 @@ URL: https://code.google.com/p/io-2012-slides
       <article>
        <h1>Size to content not to device</h1>
        <h2>Less maintenance</h2>
-       <ul>
-         <li>No need to guess about device support
-         <li>From 17 media queries to <b>4</b> 
-       </ul>
+       <ul class="goodbad">
+          <li class="bad">Size to devices
+          <li class="good">Size to content
+        </ul>
        [todo add image of resizing content.]
      </article>
   </slide>
@@ -393,6 +393,8 @@ URL: https://code.google.com/p/io-2012-slides
          <ul class="highlight">
            <li class="current">Creates Tap target box
          </ul>
+         <a href="https://code.google.com/p/chromium/codesearch#chromium/src/content/browser/android/content_view_core_impl.cc&l=899
+         ">Source code</a>
       </article>
    </slide>
   
@@ -402,7 +404,7 @@ URL: https://code.google.com/p/io-2012-slides
       <h1>User clicks a link</h1>
       <ul class="highlight">
         <li>Creates Tap target box
-        <li class="current">Creates bounding box around tap target.
+        <li class="current">Adds bounding box around tap
       </ul>
       
     </article>
@@ -414,7 +416,7 @@ URL: https://code.google.com/p/io-2012-slides
        <h1>User clicks a link</h1>
        <ul class="highlight">
          <li>Creates Tap target box
-         <li>Adds a bounding box around tap target
+         <li>Adds a bounding box around tap
          <li class="current">Finds all targets with bounding box
        </ul>
      </article>
@@ -426,7 +428,7 @@ URL: https://code.google.com/p/io-2012-slides
         <h1>User clicks a link</h1>
         <ul class="highlight">
            <li>Creates Tap target box
-           <li>Adds a bounding box around tap targets
+           <li>Adds a bounding box around tap
            <li>Finds all targets with bounding box
            <li class="current">Scores each element for closeness to touch
          </ul>
@@ -439,7 +441,7 @@ URL: https://code.google.com/p/io-2012-slides
           <h1>User clicks a link</h1>
           <ul class="highlight">
              <li>Creates Tap target box
-             <li>Adds a bounding box around tap targets
+             <li>Adds a bounding box around tap
              <li>Finds all targets with bounding box
              <li>Scores each element for closeness to touch
              <li class="current">Finds the closest
@@ -449,18 +451,44 @@ URL: https://code.google.com/p/io-2012-slides
       
    <slide class="interaction">
         <article>
-          <img style="float: right" src="images/touchtarget4.png">
+          <img style="float: right" src="images/touchtarget6.png">
           <h1>User clicks a link</h1>
           <ul class="highlight">
              <li>Creates Tap target box
-             <li>Adds a bounding box around tap targets
+             <li>Adds a bounding box around tap
              <li>Finds all targets with bounding box
              <li>Scores each element for closeness to touch
              <li>Finds the closest
-             <li class="current">Compares closets score to all elements
+             <li class="current">Compares score to all elements
            </ul>
         </article>
       </slide>
+      
+  <slide class="interaction">
+        <article>
+          <img style="float: right" src="images/touchtarget7.png">
+          <h1>User clicks a link</h1>
+          <ul class="highlight">
+             <li>Creates Tap target box
+             <li>Adds a bounding box around tap
+             <li>Finds all targets with bounding box
+             <li>Scores each element for closeness to touch
+             <li>Finds the closest
+             <li>Compares score to all elements
+             <li class="current">If &gt; 1 element near then show mangnifier
+           </ul>
+           https://code.google.com/p/chromium/codesearch#chromium/src/third_party/WebKit/Source/core/page/TouchDisambiguation.cpp&rcl=1384286955&l=91&type=cs&sq=package:chromium
+           
+           https://code.google.com/p/chromium/codesearch#chromium/src/third_party/WebKit/Source/web/WebViewImpl.cpp&rcl=1384286955&l=734&type=cs&sq=package:chromium
+        </article>
+      </slide>
+      
+      
+      <slide class="center-column interaction">
+             <article>
+               <h1>Use sensible padding</h1>
+             </article>
+           </slide>
   
   <slide class="interaction">
       <article>
@@ -498,8 +526,6 @@ URL: https://code.google.com/p/io-2012-slides
          <li class="good">Suggested target size: (26 CSS pixels - 26/96 == 7mm)
          <li class="good">Suggested margin: (8 CSS Pixels - 8/96 == 2mm)
         </ul>
-        [TODO:  Add diagram showing spacing.]
-        <p>You can actually get away with smaller.</p>
      </article>
    </slide>
   
@@ -532,6 +558,7 @@ URL: https://code.google.com/p/io-2012-slides
     
   <slide class="interaction">
     <article>
+      [TODO: re-record video]
       <video class=demo poster="images/poster.png" loop muted>
         <source src="videos/touchevents.webm"></source>
       </video>

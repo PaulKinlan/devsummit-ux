@@ -23,7 +23,6 @@
     <script>
     onload = function() {
       var touchstart = document.getElementById("touchstart");
-      var touchmove = document.getElementById("touchmove");
       var touchend = document.getElementById("touchend");
       var click = document.getElementById("click");
       var diff = document.getElementById("diff");
@@ -33,7 +32,6 @@
       
       touch.ontouchstart = function(e) {
         touchstart.innerText = touchtime = e.timeStamp;
-        touchmove.innerText = "";
         touchend.innerText = "";
         click.innerText = "";
         
@@ -42,7 +40,6 @@
       
       touch.ontouchmove = function(e) {
         e.preventDefault();
-        touchmove.innerText = e.timeStamp;
       };
       
       touch.ontouchend = function(e) {
@@ -66,7 +63,6 @@
     <h1>Touch events</h1>
     <div id="container">
       <div><b>ontouchstart</b>: <span id="touchstart"></span></div>
-      <div><b>ontouchmove</b>: <span id="touchmove"></span></div>
       <div><b>ontouchend</b>: <span id="touchend"></span></div>
       <div><b>onclick</b>: <span id="click"></span> <span id="diff"></span></div>
     </div>

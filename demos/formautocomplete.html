@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fullscreen</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <style>
+      body { padding: 0px; font-family: Arial; margin: 0px; }
+      form div {
+        -webkit-transition: 0.2s all ease-in-out;
+      }
+      form div:active {
+        background-color: #ababab;
+      }
+      
+      form div {
+        margin: 8px 0 8px 0;
+        padding: 5px;
+      }
+      
+      label {
+        display: block;
+        height: 28px;
+      }
+      form input {
+        display: block;
+        font-size: 1em;
+        width: 100%;
+        box-sizing: border-box;
+      }
+    </style>
+    <script>
+    </script>
+  </head>
+  <body>
+    <form method="post">
+      <div> <!-- only using the div to highlight tap targets -->
+      <label for="fname">First name:</label>
+      <input type="text" name="fname" id="fname">
+      </div>
+      <div> <!-- only using the div to highlight tap targets -->
+      <label for="lname">Last name:</label>
+      <input type="text" name="lname" id="lname">
+      </div>
+      <div> <!-- only using the div to highlight tap targets -->
+      <label for="email">E-mail:</label>
+      <input type="text" name="email" id="email">
+      </div>
+    </form>
+    
+  </body>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-40858405-1', 'mobile-html.appspot.com');
+    ga('send', 'pageview');
+
+  </script>
+</html>
