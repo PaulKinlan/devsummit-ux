@@ -39,6 +39,13 @@ slides > slide {
       padding: 2em;
       font-size: 3em;
       font-style: italic;
+      
+      &:before {
+        content: "";
+      }
+      &:after {
+        content: attr(after);
+      }
     }
     
     .good:before {

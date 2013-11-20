@@ -29,9 +29,12 @@ URL: https://code.google.com/p/io-2012-slides
   
   <script>
     document.addEventListener("slideenter", function(e) {
-      var vid = e.slide.querySelector("video");
-      if(vid) {
-        vid.play();
+      var vids = e.slide.querySelectorAll("video");
+      for(var v in vids) {
+        var vid = vids[v];
+        if(vid) {
+          vid.play();
+        }
       }
 
     }, false);
@@ -67,35 +70,47 @@ URL: https://code.google.com/p/io-2012-slides
        <h1>Why Mobile Web UX at a dev conference?</h1>
     </article>
   </slide>
-
-  <!--<slide class="fill segue nobackground center-column section-slide" style="background-image: url(images/hugephone.jpg); background-position: 200px;">
-    <article>
-       <h1>Mobiles are Big</h1>
-       
-       <p>MrBeck: http://www.flickr.com/photos/mrbeck/271556588</p>
-    </article>
-  </slide>-->
   
   <slide class="fill segue nobackground center-column section-slide" style="background-image: url(images/mobilegrowth.png);">
     <article>
-       <h1>Mobile is Huge</h1>
-       <h2>TODO: better image</h2>
+       <h1 style="background-color: #34495E; padding: 10px;">Mobile is Huge</h1>
     </article>
   </slide>
   
   <slide>
      <article>
-       <h1>Some leading examples</h1>
+       <h1>Native is leading</h1>
+       <ul>
+          <div class="nexus-5-frame-port"  style="float: left; margin-left: -20px;">
+         <video poster="images/poster.png" loop muted>
+            <source src="videos/nowvoice.webm">
+          </video>
+          </div>
+          <div class="nexus-5-frame-port"  style="float: left; margin-left: -20px;">
+           <video poster="images/poster.png" loop muted>
+              <source src="videos/nowcards.webm">
+            </video>
+         </div>
+       </ul>
+    </article>
+  </slide>
+  
+  <slide>
+     <article>
+       <h1>We have some great web experiences</h1>
        <ul>
          <div class="nexus-5-frame-port" style="float: left;">
           <img src="images/bbc.png">
          </div>
-         <div class="nexus-5-frame-port"  style="float: left;">
+         <div class="nexus-5-frame-port"  style="float: left; margin-left: -20px;">
            <img src="images/forecastio.png">
          </div>
-         <div class="nexus-5-frame-port"  style="float: left;">
-            <img src="images/touchtargets.png">
+         <div class="nexus-5-frame-port"  style="float: left; margin-left: -20px;">
+            <img src="images/google.png">
          </div>
+         <div class="nexus-5-frame-port"  style="float: left; margin-left: -20px;">
+             <img src="images/yahoo.png">
+          </div>
        </ul>
     </article>
   </slide>
@@ -137,7 +152,7 @@ URL: https://code.google.com/p/io-2012-slides
      <article>
        <h1>60% have text readability issues</h1>
        <div class="nexus-5-frame-port">
-       <img src="images/readability.png">
+       <img src="images/kinlan.png">
        </div>
     </article>
   </slide>
@@ -160,7 +175,8 @@ URL: https://code.google.com/p/io-2012-slides
   <slide class="section-slide">
      <article>
        <h1>PageSpeed Insights for UX</h1>
-        <a href="https://developers.google.com/speed/pagespeed/insights/?rules=uselegiblefontsizes%2Csizetaptargetsappropriately%2Cavoidplugins%2Cconfigureviewport&url=google.com%2Fsearch%3Fq%3Dflowers"><img src="images/pagespeedux.png" style="float:right; width: 640px; height: 552px"></a>
+       <h2><a href="http://developers.google.com/speed/pagespeed/insights/?ux=1&url=google.com%2Fsearch%3Fq%3Dflowers">developers.google.com/speed/pagespeed/insights/?ux=1</a></h2>
+       <a href="https://developers.google.com/speed/pagespeed/insights/?ux=1&url=http%3A%2F%2Fwww.kinlan.co.uk"><img src="images/pagespeedux.png" style="float:right; width: 640px; height: 552px"></a>
        
        <ul>
          <li>Checks viewport configuration
@@ -168,7 +184,7 @@ URL: https://code.google.com/p/io-2012-slides
          <li>Finds un-tappable touch targets
          <li>Identifies usage of legacy plugins
        </ul>
-       <a href="https://developers.google.com/speed/pagespeed/insights/?rules=uselegiblefontsizes%2Csizetaptargetsappropriately%2Cavoidplugins%2Cconfigureviewport&url=google.com%2Fsearch%3Fq%3Dflowers">developers.google.com/speed/pagespeed/insights/?mobileux</a>
+
     </article>
   </slide>
   
@@ -232,7 +248,7 @@ URL: https://code.google.com/p/io-2012-slides
        <img src="images/n412pt.png"  />
       </div>
       
-      <h2>12pt font reads like a 5pt font.</h2>
+      <h2>12pt font reads like a 5pt font</h2>
     </article>
   </slide>
   
@@ -259,7 +275,7 @@ URL: https://code.google.com/p/io-2012-slides
         <img src="images/n712pt.png"/>
         </div>
        
-       <h2>12pt font reads like a 7pt font.</h2>
+       <h2>12pt font reads like a 7pt font</h2>
     </article>
   </slide>
   
@@ -276,10 +292,12 @@ URL: https://code.google.com/p/io-2012-slides
   
   <slide class="display">
      <article>
-       <img src="images/fontboosting2.png" style="width: 642px; height: 638px; float:right">
+        <div class="nexus-5-frame-port" style="float: right; width: initial; min-width:initial;">
+       <img src="images/fontboosting.png" style="width: 484px;">
+       </div>
        <h1>It's all a lie</h1>
-       <h2>Browsers use "Text Autosize"</h2>
-       <h2>It ruins your designs</h3>
+       <h2>Browsers use "Text Auto-size"</h2>
+       <h2>It ruins your non-mobile designs</h3>
        
        <ul class="goodbad">
          <li class="good">Use a viewport
@@ -360,7 +378,7 @@ URL: https://code.google.com/p/io-2012-slides
        </video>
        </div>
        <h1>Font readability</h1>     
-       <q>If users can’t read the words in your app, it doesn’t matter how beautiful the typography is</q> &mdash; Apple
+       <q after=" &mdash; Apple">If users can’t read the words in your app, it doesn’t matter how beautiful the typography is</q>
        <ul class="goodbad">
         <li class="good">Minimum 12pt == 1 em == 16 px
         <li class="good">Increase contrast
@@ -390,22 +408,6 @@ URL: https://code.google.com/p/io-2012-slides
        <h1>Interaction</h1>
     </article>
   </slide>
-  <!--
-  <slide class="interaction">
-      <article>
-        <div class="nexus-5-frame-port demo" >
-        <video poster="images/poster.png" loop muted>
-          <source src="videos/touchwrong.webm"></source>
-        </video>
-        </div>
-        <h1>Design for touch</h1>
-        <ul>
-          <li>but also mouse,
-          <li>keyboard,
-          <li>and screenreader
-        </ul>
-     </article>
-  </slide>-->
   
   <slide class="center-column interaction">
       <article>
@@ -415,14 +417,14 @@ URL: https://code.google.com/p/io-2012-slides
           <source src="videos/magnify.webm"></source>
         </video>
         </div>
-        
      </article>
   </slide>
   
   <slide class="interaction">
      <article>
-       <img style="float: right;"  src="images/touchtarget.png">
        <h1>User clicks a link</h1>
+       <img style="float: right;"  src="images/touchtarget.png">
+       
      </article>
   </slide>
   
@@ -556,8 +558,8 @@ URL: https://code.google.com/p/io-2012-slides
            </div>
          <h2>1 CSS px is 1/96in</h2>
          <ul>
-           <li>iOS: 1 pt == 1/72nd of an inch == 33px
-           <li>Android: 1 dip == 1px at 160dpi == 29px
+           <li>iOS: 1 pt == 33px
+           <li>Android: 1 dip == 29px
            <li>Microsoft: 9mm == 33px
          </ul>
         <ul class="goodbad">
@@ -597,12 +599,13 @@ URL: https://code.google.com/p/io-2012-slides
     
   <slide class="interaction">
     <article>
-      <div class="nexus-5-frame-port demo" >
-      <video poster="images/poster.png" loop muted>
-        <source src="videos/touchdelay.webm"></source>
-      </video>
-      </div>
+      
        <h1>300ms click delay</h1>
+       <div class="nexus-5-frame-port demo" >
+       <video poster="images/poster.png" loop muted>
+         <source src="videos/touchdelay.webm"></source>
+       </video>
+       </div>
        <ul>
          <li>Used to detect "double-tap"
        </ul>
@@ -678,9 +681,13 @@ URL: https://code.google.com/p/io-2012-slides
   
   <slide class="interaction center-column">
       <article>
-        <div class="nexus-5-frame-port" >
-        <video poster="images/poster.png" loop muted>
-          <source src="videos/interaction.webm"></source>
+        <div>
+        <video poster="images/poster.png" style="float: left; width: 50%;" loop muted>
+          <source src="videos/300ms.webm"></source>
+        </video>
+       
+        <video poster="images/poster.png" style="float: left; width: 50%;" loop muted>
+          <source src="videos/0ms.webm"></source>
         </video>
         </div>
         <h1>Better for interaction</h1>
@@ -689,12 +696,13 @@ URL: https://code.google.com/p/io-2012-slides
    
    <slide class="interaction">
        <article>
+         <h1>Removing 300ms delay</h1>
          <div class="nexus-5-frame-port demo" >
          <video poster="images/poster.png" loop muted>
-           <source src="videos/sizedcontent.webm"></source>
+           <source src="videos/clickdelay.webm"></source>
          </video>
          </div>
-         <h1>Removing 300ms delay</h1>
+         
          <h2 class="warning">Double tap to zoom is disabled</h2>
          
         <ul class="goodbad">
@@ -723,12 +731,13 @@ URL: https://code.google.com/p/io-2012-slides
   
     <slide class="interaction">
       <article>
+        <h1>Specialized keyboards</h1>
         <div class="nexus-5-frame-port demo" >
         <video poster="images/poster.png" loop muted>
           <source src="videos/input.webm"></source>
         </video>
         </div>
-        <h1>Specialized keyboards</h1>
+        
         <ul class="goodbad">
           <li class="good">Use semantic types
         <pre class="prettyprint" data-lang="html">&lt;input <b>type="email"</b>&gt;
@@ -744,18 +753,18 @@ URL: https://code.google.com/p/io-2012-slides
 <ul>
   <li>Increases accuracy
 </ul>
-        <p>Demo: <a href="http://goo.gl/CNMp6" target="_blank">goo.gl/CNMp6</a></p>
+        <p><a href="http://www.html5rocks.com/en/tutorials/forms/html5forms/" target="_blank">www.html5rocks.com/en/tutorials/forms/html5forms/</a></p>
       </article>
     </slide>
     
      <slide class="interaction">
         <article>
+          <h1>Take advantage of autocomplete</h1>
           <div class="nexus-5-frame-port demo" >
           <video poster="images/poster.png" loop muted>
             <source src="videos/autocomplete.webm"></source>
           </video>
           </div>
-          <h1>Take advantage of autocomplete</h1>
           <ul class="goodbad">
             <li class="good">Provide hints to the browser
           <pre class="prettyprint" data-lang="html">&lt;form method="post">
@@ -774,12 +783,13 @@ URL: https://code.google.com/p/io-2012-slides
       
       <slide class="interaction">
           <article>
+            <h1>Plan for requestAutoComplete</h1>
             <div class="nexus-5-frame-port demo" >
             <video poster="images/poster.png" loop muted>
               <source src="videos/autocomplete.webm"></source>
             </video>
             </div>
-            <h1>Plan for requestAutoComplete</h1>
+           
             <pre class="prettyprint" data-lang="html">[todo, add feature detect]
               
 button.addEventListener('click', function(){
@@ -803,13 +813,13 @@ form.addEventListener('autocompleteerror', function(){
         
   <slide class="interaction">
      <article>
+       <h1>Remove Plugins</h1>
        <div class="nexus-5-frame-port demo" >
        <video poster="images/poster.png" loop muted>
          <source src="videos/interstial.webm"></source>
        </video>
        </div>
-       <h1>Remove Plugins</h1>
-       [TODO add stats about plugin usage]
+       
        <ul class="goodbad">
           <li class="good">Youtube embed
        </ul>
@@ -818,18 +828,20 @@ form.addEventListener('autocompleteerror', function(){
      
   <slide class="interaction">
      <article>
+       <h1>Remove fullscreen app interstitials</h1>
        <div class="nexus-5-frame-port demo" >
        <video poster="images/poster.png" loop muted>
-         <source src="videos/interstial.webm"></source>
+         <source src="videos/verge.webm"></source>
        </video>
        </div>
-       <h1>Remove fullscreen app interstitials</h1>
+       
        <h2>Don't stop users getting to your content</h2>
        <h2>But if you do need to use them, be smart</h2>
        <ul class="goodbad">
          <li class="good">Only show it once
          <li class="good">Use app-banner on iOS
-           <pre class="prettyprint">&lt;meta name="app" ... &gt;</pre>
+           <pre class="prettyprint">&lt;meta name="apple-itunes-app" 
+      content="app-id=myAppStoreID"&gt;</pre>
          <li class="good">Emulate app-banner on Android
        </ul>
        
@@ -846,9 +858,8 @@ form.addEventListener('autocompleteerror', function(){
   <slide class="center-column section-slide">
      <article>
        <h1>We love feedback!</h1>
-       <h2>developers.google.com/speed/pagespeed/insights/</h2>
-       <a href="https://developers.google.com/speed/pagespeed/insights
-       /?rules=uselegiblefontsizes%2Csizetaptargetsappropriately%2Cavoidplugins%2Cconfigureviewport&url=google.com%2Fsearch%3Fq%3Dflowers"><img src="images/pagespeedux.png"></a>
+       <h2>developers.google.com/speed/pagespeed/insights/?<b>ux=1</b></h2>
+       <a href="https://developers.google.com/speed/pagespeed/insights/?ux=1&url=http%3A%2F%2Fwww.kinlan.co.uk"></a>
     </article>
   </slide>
  

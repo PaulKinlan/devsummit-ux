@@ -270,9 +270,7 @@ slides > slide {
   }
 
   &:not(.nobackground) {
-    //background: white url(../../images/google_developers_icon_128.png) ($brand-small-icon-size * 2) 98% no-repeat;
-    //@include background-size($brand-small-icon-size $brand-small-icon-size);
-
+    
     &:before {
       font-size: 12pt;
       content: $social-tags;
@@ -654,12 +652,12 @@ q {
   line-height: 72px;
 
   &:before {
-    content: '“';
+    content: '';
     position: absolute;
     margin-left: -0.5em;
   }
   &:after {
-    content: '”';
+    content: '';
     position: absolute;
     margin-left: 0.1em;
   }
