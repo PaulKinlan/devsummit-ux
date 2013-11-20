@@ -32,11 +32,11 @@ $nexus-5-bottom-padding: 500px;
 .nexus-5-frame-port {
     display: block;
 
-    @include size-nexus-5-frame-port(1);
+    @include size-nexus-5-frame-port(0.2);
 
     overflow: hidden;
 
-    background-image: url('./../images/nexus-5-frame-port.png');
+    background-image: url('/images/nexus-5-frame-port.png');
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -62,7 +62,7 @@ $nexus-5-bottom-padding: 500px;
 
     overflow: hidden;
 
-    background-image: url('./../images/nexus-5-frame-land.png');
+    background-image: url('/images/nexus-5-frame-land.png');
     background-repeat: no-repeat;
     background-size: contain;
 

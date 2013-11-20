@@ -1,0 +1,83 @@
+$nexus-4-device-width: 1690px;
+$nexus-4-device-height: 2857px;
+$nexus-4-left-padding: 304px;
+$nexus-4-right-padding: 306px;
+$nexus-4-top-padding: 436px;
+$nexus-4-bottom-padding: 500px;
+
+@mixin size-nexus-4-frame-port($scale-factor) {
+    width: $nexus-4-device-width * $scale-factor;
+    min-width: $nexus-4-device-width * $scale-factor;
+    height: $nexus-4-device-height * $scale-factor;
+    min-height: $nexus-4-device-height * $scale-factor;
+
+    padding: ($nexus-4-top-padding * $scale-factor)
+    ($nexus-4-right-padding * $scale-factor)
+    ($nexus-4-bottom-padding * $scale-factor)
+    ($nexus-4-left-padding * $scale-factor);
+}
+
+@mixin size-nexus-4-frame-land($scale-factor) {
+    width: $nexus-4-device-height * $scale-factor;
+    min-width: $nexus-4-device-height * $scale-factor;
+    height: $nexus-4-device-width * $scale-factor;
+    min-height: $nexus-4-device-width * $scale-factor;
+
+    padding: ($nexus-4-right-padding * $scale-factor)
+    ($nexus-4-bottom-padding * $scale-factor)
+    ($nexus-4-left-padding * $scale-factor)
+    ($nexus-4-top-padding * $scale-factor);
+}
+
+.nexus-4-frame-port {
+    display: block;
+
+    @include size-nexus-4-frame-port(0.2);
+
+    overflow: hidden;
+
+    background-image: url('/images/nexus-4-frame-port.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    box-sizing: border-box;
+
+    * {
+        width: 100%;
+    }
+
+    /**@media screen and (max-width: $nexus-4-device-width) , screen and (max-height: $nexus-4-device-height) {
+        @include size-nexus-4-frame-port(0.5);
+    }
+
+    @media screen and (max-width: ($nexus-4-device-width * 0.5)) , screen and (max-height: ($nexus-4-device-height * 0.5)) {
+        @include size-nexus-4-frame-port(0.25);
+    }**/
+}
+
+.nexus-4-frame-land {
+    display: block;
+
+    @include size-nexus-4-frame-land(1);
+
+    overflow: hidden;
+
+    background-image: url('/images/nexus-4-frame-land.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    box-sizing: border-box;
+
+    * {
+        width: 100%;
+    }
+
+    /**@media screen and (max-width: $nexus-4-device-height) , screen and (max-height: $nexus-4-device-width) {
+        @include size-nexus-4-frame-land(0.5);
+    }
+
+    @media screen and (max-width: ($nexus-4-device-height * 0.5)) , screen and (max-height: ($nexus-4-device-width * 0.5)) {
+        @include size-nexus-4-frame-land(0.25);
+    }**/
+}
+

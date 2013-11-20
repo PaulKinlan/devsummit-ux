@@ -86,11 +86,16 @@ URL: https://code.google.com/p/io-2012-slides
   <slide>
      <article>
        <h1>Some leading examples</h1>
-       [todo show some great sites]
        <ul>
-        <li>bbc
-        <li>forecast.io
-        <li>and others
+         <div class="nexus-5-frame-port" style="float: left;">
+          <img src="images/bbc.png">
+         </div>
+         <div class="nexus-5-frame-port"  style="float: left;">
+           <img src="images/forecastio.png">
+         </div>
+         <div class="nexus-5-frame-port"  style="float: left;">
+            <img src="images/touchtargets.png">
+         </div>
        </ul>
     </article>
   </slide>
@@ -104,35 +109,45 @@ URL: https://code.google.com/p/io-2012-slides
   <slide class="center-column segue clear">
     <article>
       <h1>53% had a desktop experience</h1>
+      <div class="nexus-5-frame-port">
       <img src="images/desktop.png" style="width: 300px">
+      </div>
     </article>
   </slide>
   
   <slide class="center-column segue clear">
      <article>
        <h1>25% didn’t fit in on screen</h1>
+       <div class="nexus-5-frame-port">
        <img src="images/fitviewport.png" style="width: 300px">
+       </div>
     </article>
   </slide>
   
   <slide class="center-column segue clear">
      <article>
        <h1>83% have hard to touch tap targets</h1>
+       <div class="nexus-5-frame-port">
        <img src="images/touchtargets.png" style="width: 300px">
+       </div>
     </article>
   </slide>
   
   <slide class="center-column segue clear">
      <article>
        <h1>60% have text readability issues</h1>
+       <div class="nexus-5-frame-port">
        <img src="images/readability.png" style="width: 300px">
+       </div>
     </article>
   </slide>
   
   <slide class="center-column segue clear">
      <article>
        <h1>10% used Plugins</h1>
+       <div class="nexus-5-frame-port">
        <img src="images/plugins.png" style="width: 300px">
+       </div>
     </article>
   </slide>
   
@@ -202,36 +217,52 @@ URL: https://code.google.com/p/io-2012-slides
     
   </slide>
   
-  <slide class="center-column display">
+  <slide class="display">
      <article>
+       <div class="nexus-4-frame-port" style="float: right">
+        <img src="images/n412ptv.png"  />
+       </div>
+      <div class="nexus-4-frame-port" style="float: right">
+       <img src="images/n412pt.png"  />
+      </div>
       <h1>Nexus 4 - 39%</h1>
       <h2>12pt font reads like a 5pt font.</h2>
-      [todo: add screenshot]
-      http://jsbin.com/owIXuzO/3
     </article>
   </slide>
   
-  <slide class="center-column display">
+  <slide class="display">
      <article>
+       <div class="nexus-5-frame-port" style="float: right">
+          <img src="images/n512ptv.png" />
+        </div>
+       <div class="nexus-5-frame-port" style="float: right">
+         <img src="images/n512pt.png" />
+       </div>
        <h1>Nexus 5 - 37%</h1>
        <h2>12pt font reads like a 4pt font</h2>
-       [todo: add screenshot]
     </article>
   </slide>
   
-  <slide class="center-column display">
+  <slide class="display">
     <article>
+       <div class="nexus-7-frame-port" style="float: right; margin-right: -100px;">
+         <img src="images/n712ptv.png"/>
+       </div>
+       <div class="nexus-7-frame-port" style="float: right; margin-right: -150px;">
+        <img src="images/n712pt.png"/>
+        </div>
        <h1>Nexus 7 - 61%</h1>
        <h2>12pt font reads like a 7pt font.</h2>
-       [todo: add screenshot]
     </article>
   </slide>
   
-  <slide class="center-column display">
+  <slide class="display">
      <article>
+       <div class="nexus-10-frame-port" style="float: right">
+         <img src="images/n1012pt.png"/>
+       </div>
        <h1>Nexus 10 - 82%</h1>
        <h2>12pt font reads like a 9pt font</h2>
-       [todo: add screenshot]
     </article>
   </slide>
   
@@ -353,29 +384,13 @@ URL: https://code.google.com/p/io-2012-slides
      </article>
   </slide>
   
-  <slide class="interaction">
+  <slide class="center-column interaction">
       <article>
+        <h1>Click disambiguation</h1>
         <video class=demo poster="images/poster.png" loop muted>
           <source src="videos/magnify.webm"></source>
         </video>
-        <h1>Click disambiguation</h1>
-        [EDITORS: DON'T READ THIS.  THEY ARE MY NOTES.  THEY WONT BE IN FINAL SLIDES]
-        <p>Learn more: <a href="http://goo.gl/0CEFgw">goo.gl/0CEFgw</a></p>
-        <ul>
-          <li>tap target box
-          <li>bounding box twice size of tap target.
-          <li>elements that are in the bounding box that respond to "click" events
-              nearest corner
-          <li>looks for good targets, scored based on distance.
-              best score = ... (closest)  0..1
-              if there is an element at 1. then boom, plenty of choice.
-          <li>if score > (0.5 * best score) on more than two targets then show disambiguator.
-            | padding = 32 / 2
-            | (16 - (8)) * (1/16)
-           <li> 62 pixels.
-         
-            padding > ( tap target distance.)
-        </ul>
+        
      </article>
   </slide>
   
@@ -496,22 +511,15 @@ URL: https://code.google.com/p/io-2012-slides
           <source src="videos/taptargets.webm"></source>
         </video>
         <h1>Tap Targets</h1>
-        [TODO:VIDEO will show sizes as per each recomendation.]
-        <h2>Minimum target Recommendations</h2>
+        
+        <h2>Minimum target recommendations</h2>
         <ul>
          <li>iOS: 44 pt
          <li>Android: 48 dip
          <li>Microsoft: 23 DLG
         </ul>
         <h2>What do they mean in web terms?</h2>
-        <ul>
-          <li>iOS: 1 pt (1/76th of an inch)
-          <!-- (44/96) * 72 -->
-          <li>Android: 1 dips (1px at 160dpi)
-          <!--  48 / 96 * 160 = 28.8 -->
-          <li>Microsoft: 1 DLG (Who knows?)
-        </ul>
-        <h2>1 CSS px is 1/96in</h2>
+        
     </article>
   </slide>
     
@@ -520,8 +528,14 @@ URL: https://code.google.com/p/io-2012-slides
          <video class=demo poster="images/poster.png" loop muted>
            <source src="videos/taptargets.webm"></source>
          </video>
-         <h1>Tap Targets - In the real world</h1>
+         [TODO:VIDEO will show sizes as per each recomendation.]
+         <h1>Tap Targets - On the web</h1>
          <h2>1 CSS px is 1/96in</h2>
+         <ul>
+           <li>iOS: 1 pt == 1/72nd of an inch == 33px
+           <li>Android: 1 dip == 1px at 160dpi == 29px
+           <li>Microsoft: 1 DLG (Who knows?)
+         </ul>
         <ul class="goodbad">
          <li class="good">Suggested target size: (26 CSS pixels - 26/96 == 7mm)
          <li class="good">Suggested margin: (8 CSS Pixels - 8/96 == 2mm)
@@ -737,7 +751,7 @@ button.addEventListener('click', function(){
 // see details on event handling below
 form.addEventListener('autocomplete', function(){
   // successful rAc
-  // Call your client-side form validation logic here, if you have any.
+  // Call your client-side form validation logic here
   form.submit();  // trigger submit
 });
 

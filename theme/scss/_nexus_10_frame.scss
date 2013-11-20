@@ -1,0 +1,88 @@
+$nexus-10-device-width: 1580px;
+$nexus-10-device-height: 2857px;
+$nexus-10-left-padding: 275px;
+$nexus-10-right-padding: 300px;
+$nexus-10-top-padding: 280px;
+$nexus-10-bottom-padding: 500px;
+
+@mixin size-nexus-10-frame-port($scale-factor) {
+    width: $nexus-10-device-width * $scale-factor;
+    min-width: $nexus-10-device-width * $scale-factor;
+    height: $nexus-10-device-height * $scale-factor;
+    min-height: $nexus-10-device-height * $scale-factor;
+
+    padding: ($nexus-10-top-padding * $scale-factor)
+    ($nexus-10-right-padding * $scale-factor)
+    ($nexus-10-bottom-padding * $scale-factor)
+    ($nexus-10-left-padding * $scale-factor);
+}
+
+@mixin size-nexus-10-frame-land($scale-factor) {
+    width: $nexus-10-device-height * $scale-factor;
+    min-width: $nexus-10-device-height * $scale-factor;
+    height: $nexus-10-device-width * $scale-factor;
+    min-height: $nexus-10-device-width * $scale-factor;
+
+    padding: ($nexus-10-right-padding * $scale-factor)
+    ($nexus-10-bottom-padding * $scale-factor)
+    ($nexus-10-left-padding * $scale-factor)
+    ($nexus-10-top-padding * $scale-factor);
+}
+
+.nexus-10-frame-port {
+    display: block;
+   
+
+    @include size-nexus-10-frame-port(0.4);
+
+    overflow: hidden;
+
+    background-image: url('/images/nexus-10-frame-port.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    box-sizing: border-box;
+
+    * {
+        width: 100%;
+    }
+    
+    img {
+     box-shadow: inset 0px 0px 10px #000;
+    }
+
+    /**@media screen and (max-width: $nexus-10-device-width) , screen and (max-height: $nexus-10-device-height) {
+        @include size-nexus-10-frame-port(0.5);
+    }
+
+    @media screen and (max-width: ($nexus-10-device-width * 0.5)) , screen and (max-height: ($nexus-10-device-height * 0.5)) {
+        @include size-nexus-10-frame-port(0.25);
+    }**/
+}
+
+.nexus-10-frame-land {
+    display: block;
+
+    @include size-nexus-10-frame-land(1);
+
+    overflow: hidden;
+
+    background-image: url('/images/nexus-10-frame-land.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    box-sizing: border-box;
+
+    * {
+        width: 100%;
+    }
+
+    /**@media screen and (max-width: $nexus-10-device-height) , screen and (max-height: $nexus-10-device-width) {
+        @include size-nexus-10-frame-land(0.5);
+    }
+
+    @media screen and (max-width: ($nexus-10-device-height * 0.5)) , screen and (max-height: ($nexus-10-device-width * 0.5)) {
+        @include size-nexus-10-frame-land(0.25);
+    }**/
+}
+
