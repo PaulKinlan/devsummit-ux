@@ -65,6 +65,13 @@ slides > slide {
       }
     }
     
+    div {
+      &.demo {
+        float: right;
+        background-color: inherit;
+      }
+    }
+    
     video {
       &.demo {
         float: right;

@@ -110,7 +110,7 @@ URL: https://code.google.com/p/io-2012-slides
     <article>
       <h1>53% had a desktop experience</h1>
       <div class="nexus-5-frame-port">
-      <img src="images/desktop.png" style="width: 300px">
+      <img src="images/desktop.png">
       </div>
     </article>
   </slide>
@@ -119,7 +119,7 @@ URL: https://code.google.com/p/io-2012-slides
      <article>
        <h1>25% didn’t fit in on screen</h1>
        <div class="nexus-5-frame-port">
-       <img src="images/fitviewport.png" style="width: 300px">
+       <img src="images/fitviewport.png">
        </div>
     </article>
   </slide>
@@ -128,7 +128,7 @@ URL: https://code.google.com/p/io-2012-slides
      <article>
        <h1>83% have hard to touch tap targets</h1>
        <div class="nexus-5-frame-port">
-       <img src="images/touchtargets.png" style="width: 300px">
+         <img src="images/touchtargets.png">
        </div>
     </article>
   </slide>
@@ -137,7 +137,7 @@ URL: https://code.google.com/p/io-2012-slides
      <article>
        <h1>60% have text readability issues</h1>
        <div class="nexus-5-frame-port">
-       <img src="images/readability.png" style="width: 300px">
+       <img src="images/readability.png">
        </div>
     </article>
   </slide>
@@ -146,7 +146,7 @@ URL: https://code.google.com/p/io-2012-slides
      <article>
        <h1>10% used Plugins</h1>
        <div class="nexus-5-frame-port">
-       <img src="images/plugins.png" style="width: 300px">
+       <img src="images/plugins.png">
        </div>
     </article>
   </slide>
@@ -159,7 +159,7 @@ URL: https://code.google.com/p/io-2012-slides
   
   <slide class="section-slide">
      <article>
-        <a href="https://developers.google.com/speed/pagespeed/insights/internal/?rules=uselegiblefontsizes%2Csizetaptargetsappropriately%2Cavoidplugins%2Cconfigureviewport&url=google.com%2Fsearch%3Fq%3Dflowers"><img src="images/pagespeedux.png" style="float:right; width: 640px; height: 552px"></a>
+        <a href="https://developers.google.com/speed/pagespeed/insights/?rules=uselegiblefontsizes%2Csizetaptargetsappropriately%2Cavoidplugins%2Cconfigureviewport&url=google.com%2Fsearch%3Fq%3Dflowers"><img src="images/pagespeedux.png" style="float:right; width: 640px; height: 552px"></a>
        <h1>PageSpeed Insights for UX</h1>
        <ul>
          <li>Checks viewport configuration
@@ -167,7 +167,7 @@ URL: https://code.google.com/p/io-2012-slides
          <li>Finds un-tappable touch targets
          <li>Identifies usage of legacy plugins
        </ul>
-       <a href="https://developers.google.com/speed/pagespeed/insights/internal/?rules=uselegiblefontsizes%2Csizetaptargetsappropriately%2Cavoidplugins%2Cconfigureviewport&url=google.com%2Fsearch%3Fq%3Dflowers">developers.google.com/speed/pagespeed/insights/?mobileux</a>
+       <a href="https://developers.google.com/speed/pagespeed/insights/?rules=uselegiblefontsizes%2Csizetaptargetsappropriately%2Cavoidplugins%2Cconfigureviewport&url=google.com%2Fsearch%3Fq%3Dflowers">developers.google.com/speed/pagespeed/insights/?mobileux</a>
     </article>
   </slide>
   
@@ -196,9 +196,12 @@ URL: https://code.google.com/p/io-2012-slides
   
   <slide class="display">
     <article>
-      <video class="demo" poster="images/poster.png" loop muted>
-        <source src="videos/viewport.webm">
-      </video>
+      <div class="nexus-5-frame-port demo" >
+       <video poster="images/poster.png" loop muted>
+         <source src="videos/viewport.webm">
+       </video>
+      </div>
+      
       <h1>Always use a viewport</h1>
       <h2>The most critical element for mobile!</h2>
       
@@ -282,9 +285,11 @@ URL: https://code.google.com/p/io-2012-slides
   
   <slide class="display">
     <article>
-      <video class=demo poster="images/poster.png" loop muted>
+      <div class="nexus-5-frame-port demo" >
+      <video c poster="images/poster.png" loop muted>
         <source src="videos/goal.webm">
       </video>
+      </div>
       <h1>Fit content in viewport</h1>
       <ul>
         <li>It drives users crazy
@@ -299,9 +304,11 @@ URL: https://code.google.com/p/io-2012-slides
     
   <slide class="display">
     <article>
-      <video class=demo poster="images/poster.png" loop muted>
-        <source src="videos/cssorientation.webm">
-      </video>
+      <div class="nexus-5-frame-port demo" >
+        <video poster="images/poster.png" loop muted>
+          <source src="videos/cssorientation.webm">
+        </video>
+      </div>
       <h1>Media Queries</h1>
       <h2>Adaptive to screen size</h2>
   	  <pre class="prettyprint">@media screen and (min-width: 800px) { ... }</pre>
@@ -315,10 +322,14 @@ URL: https://code.google.com/p/io-2012-slides
   <slide class="center-column display">
     <article>
         <h1>HTML5Rocks redesign</h1>
-        <div class="content" style="flex-direction: row;">
-          <img src="/images/h5rold.png" style="width: 360px; height: 640px; margin: 5px;">
-          <img src="/images/h5rnew.png" style="width: 360px; height: 640px; margin: 5px;">
-          <h3>From 17 media queries to <b>4</b></h3>
+        <h3>From 17 media queries to <b>4</b></h3>
+        <div>
+        <div class="nexus-5-frame-port demo" >
+          <img src="/images/h5rnew.png">
+        </div>
+        <div class="nexus-5-frame-port demo">
+          <img src="/images/h5rold.png">
+        </div>
         </div>
     </article>
   </slide>
@@ -337,9 +348,11 @@ URL: https://code.google.com/p/io-2012-slides
   
   <slide class="display">
       <article>
-       <video class=demo poster="images/poster.png" loop muted>
+        <div class="nexus-5-frame-port demo" >
+       <video poster="images/poster.png" loop muted>
          <source src="videos/fontreadability.webm"></source>
        </video>
+       </div>
        <h1>Font readability</h1>     
        <q>If users can’t read the words in your app, it doesn’t matter how beautiful the typography is</q> &mdash; Apple
        <ul class="goodbad">
@@ -352,9 +365,11 @@ URL: https://code.google.com/p/io-2012-slides
   
   <slide class="display">
       <article>
-        <video class=demo poster="images/poster.png" loop muted>
+        <div class="nexus-5-frame-port demo" >
+        <video poster="images/poster.png" loop muted>
           <source src="videos/webfonts.webm"></source>
         </video>
+        </div>
         <h1>Limit use of Web Fonts</h1>
         <h2>FOUC &mdash; Flash of Un-styled Content</h2>
         <ul class="goodbad">
@@ -372,9 +387,11 @@ URL: https://code.google.com/p/io-2012-slides
   
   <slide class="interaction">
       <article>
-        <video class=demo poster="images/poster.png" loop muted>
+        <div class="nexus-5-frame-port demo" >
+        <video poster="images/poster.png" loop muted>
           <source src="videos/touchwrong.webm"></source>
         </video>
+        </div>
         <h1>Design for touch</h1>
         <ul>
           <li>but also mouse,
@@ -387,9 +404,11 @@ URL: https://code.google.com/p/io-2012-slides
   <slide class="center-column interaction">
       <article>
         <h1>Click disambiguation</h1>
-        <video class=demo poster="images/poster.png" loop muted>
+        <div class="nexus-5-frame-port demo" >
+        <video poster="images/poster.png" loop muted>
           <source src="videos/magnify.webm"></source>
         </video>
+        </div>
         
      </article>
   </slide>
@@ -498,25 +517,26 @@ URL: https://code.google.com/p/io-2012-slides
         </article>
       </slide>
       
-      
       <slide class="center-column interaction">
-             <article>
-               <h1>Use sensible padding</h1>
-             </article>
-           </slide>
+       <article>
+         <h1>Use sensible padding</h1>
+       </article>
+     </slide>
   
   <slide class="interaction">
       <article>
-        <video class=demo poster="images/poster.png" loop muted>
+        <div class="nexus-5-frame-port demo" >
+        <video poster="images/poster.png" loop muted>
           <source src="videos/taptargets.webm"></source>
         </video>
+        </div>
         <h1>Tap Targets</h1>
         
         <h2>Minimum target recommendations</h2>
         <ul>
          <li>iOS: 44 pt
          <li>Android: 48 dip
-         <li>Microsoft: 23 DLG
+         <li>Microsoft: 9mm
         </ul>
         <h2>What do they mean in web terms?</h2>
         
@@ -525,16 +545,15 @@ URL: https://code.google.com/p/io-2012-slides
     
   <slide class="interaction">
        <article>
-         <video class=demo poster="images/poster.png" loop muted>
-           <source src="videos/taptargets.webm"></source>
-         </video>
-         [TODO:VIDEO will show sizes as per each recomendation.]
+         <div class="nexus-5-frame-port" style="float: right;">
+           <img src="images/bbc.png">
+          </div>
          <h1>Tap Targets - On the web</h1>
          <h2>1 CSS px is 1/96in</h2>
          <ul>
            <li>iOS: 1 pt == 1/72nd of an inch == 33px
            <li>Android: 1 dip == 1px at 160dpi == 29px
-           <li>Microsoft: 1 DLG (Who knows?)
+           <li>Microsoft: 9mm == 33px
          </ul>
         <ul class="goodbad">
          <li class="good">Suggested target size: (26 CSS pixels - 26/96 == 7mm)
@@ -545,9 +564,11 @@ URL: https://code.google.com/p/io-2012-slides
   
   <slide class="interaction">
       <article>
-        <video class=demo poster="images/poster.png" loop muted>
+        <div class="nexus-5-frame-port demo" >
+        <video poster="images/poster.png" loop muted>
           <source src="videos/taptargetslabel.webm"></source>
         </video>
+        </div>
         [todo: demo highlight area that is tapped to show it working.]
         <h1>Form inputs</h1>
        <pre class="prettyprint">&lt;form method="post">
@@ -573,9 +594,11 @@ URL: https://code.google.com/p/io-2012-slides
   <slide class="interaction">
     <article>
       [TODO: re-record video]
-      <video class=demo poster="images/poster.png" loop muted>
+      <div class="nexus-5-frame-port demo" >
+      <video poster="images/poster.png" loop muted>
         <source src="videos/touchevents.webm"></source>
       </video>
+      </div>
        <h1>300ms click delay</h1>
        <ul>
          <li>Used to detect "double-tap"
@@ -641,27 +664,33 @@ URL: https://code.google.com/p/io-2012-slides
   
   <slide class="interaction center-column">
      <article>
-       <video class=demo poster="images/poster.png" loop muted>
+       <div class="nexus-5-frame-port" >
+       <video poster="images/poster.png" loop muted>
           <source src="videos/links.webm"></source>
         </video>
+        </div>
        <h1>Great for links</h1>
     </article>
   </slide>
   
   <slide class="interaction center-column">
       <article>
-        <video class=demo poster="images/poster.png" loop muted>
+        <div class="nexus-5-frame-port" >
+        <video poster="images/poster.png" loop muted>
           <source src="videos/interaction.webm"></source>
         </video>
+        </div>
         <h1>Better for interaction</h1>
       </article>
    </slide>
    
    <slide class="interaction">
        <article>
-         <video class=demo poster="images/poster.png" loop muted>
+         <div class="nexus-5-frame-port demo" >
+         <video poster="images/poster.png" loop muted>
            <source src="videos/sizedcontent.webm"></source>
          </video>
+         </div>
          <h1>Removing 300ms delay</h1>
          <h2 class="warning">Double tap to zoom is disabled</h2>
          
@@ -691,9 +720,11 @@ URL: https://code.google.com/p/io-2012-slides
   
     <slide class="interaction">
       <article>
-        <video class=demo poster="images/poster.png" loop muted>
+        <div class="nexus-5-frame-port demo" >
+        <video poster="images/poster.png" loop muted>
           <source src="videos/input.webm"></source>
         </video>
+        </div>
         <h1>Specialized keyboards</h1>
         <ul class="goodbad">
           <li class="good">Use semantic types
@@ -716,9 +747,11 @@ URL: https://code.google.com/p/io-2012-slides
     
      <slide class="interaction">
         <article>
-          <video class=demo poster="images/poster.png" loop muted>
+          <div class="nexus-5-frame-port demo" >
+          <video poster="images/poster.png" loop muted>
             <source src="videos/autocomplete.webm"></source>
           </video>
+          </div>
           <h1>Take advantage of autocomplete</h1>
           <ul class="goodbad">
             <li class="good">Provide hints to the browser
@@ -738,9 +771,11 @@ URL: https://code.google.com/p/io-2012-slides
       
       <slide class="interaction">
           <article>
-            <video class=demo poster="images/poster.png" loop muted>
+            <div class="nexus-5-frame-port demo" >
+            <video poster="images/poster.png" loop muted>
               <source src="videos/autocomplete.webm"></source>
             </video>
+            </div>
             <h1>Plan for requestAutoComplete</h1>
             <pre class="prettyprint" data-lang="html">[todo, add feature detect]
               
@@ -805,7 +840,8 @@ form.addEventListener('autocompleteerror', function(){
      <article>
        <h1>We love feedback!</h1>
        <h2>developers.google.com/speed/pagespeed/insights/</h2>
-       <a href="https://developers.google.com/speed/pagespeed/insights/internal/?rules=uselegiblefontsizes%2Csizetaptargetsappropriately%2Cavoidplugins%2Cconfigureviewport&url=google.com%2Fsearch%3Fq%3Dflowers"><img src="images/pagespeedux.png"></a>
+       <a href="https://developers.google.com/speed/pagespeed/insights
+       /?rules=uselegiblefontsizes%2Csizetaptargetsappropriately%2Cavoidplugins%2Cconfigureviewport&url=google.com%2Fsearch%3Fq%3Dflowers"><img src="images/pagespeedux.png"></a>
     </article>
   </slide>
  
