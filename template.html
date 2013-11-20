@@ -159,8 +159,9 @@ URL: https://code.google.com/p/io-2012-slides
   
   <slide class="section-slide">
      <article>
-        <a href="https://developers.google.com/speed/pagespeed/insights/?rules=uselegiblefontsizes%2Csizetaptargetsappropriately%2Cavoidplugins%2Cconfigureviewport&url=google.com%2Fsearch%3Fq%3Dflowers"><img src="images/pagespeedux.png" style="float:right; width: 640px; height: 552px"></a>
        <h1>PageSpeed Insights for UX</h1>
+        <a href="https://developers.google.com/speed/pagespeed/insights/?rules=uselegiblefontsizes%2Csizetaptargetsappropriately%2Cavoidplugins%2Cconfigureviewport&url=google.com%2Fsearch%3Fq%3Dflowers"><img src="images/pagespeedux.png" style="float:right; width: 640px; height: 552px"></a>
+       
        <ul>
          <li>Checks viewport configuration
          <li>Determines if text is legible
@@ -196,13 +197,14 @@ URL: https://code.google.com/p/io-2012-slides
   
   <slide class="display">
     <article>
+      <h1>Always use a viewport</h1>
       <div class="nexus-5-frame-port demo" >
        <video poster="images/poster.png" loop muted>
          <source src="videos/viewport.webm">
        </video>
       </div>
       
-      <h1>Always use a viewport</h1>
+      
       <h2>The most critical element for mobile!</h2>
       
       <pre class="prettyprint">&lt;meta name="viewport" content="width=<b>device-width</b>" /&gt;</pre>
@@ -222,49 +224,52 @@ URL: https://code.google.com/p/io-2012-slides
   
   <slide class="display">
      <article>
+       <h1>Nexus 4 - 39%</h1>
        <div class="nexus-4-frame-port" style="float: right">
         <img src="images/n412ptv.png"  />
        </div>
       <div class="nexus-4-frame-port" style="float: right">
        <img src="images/n412pt.png"  />
       </div>
-      <h1>Nexus 4 - 39%</h1>
+      
       <h2>12pt font reads like a 5pt font.</h2>
     </article>
   </slide>
   
   <slide class="display">
      <article>
-       <div class="nexus-5-frame-port" style="float: right">
-          <img src="images/n512ptv.png" />
-        </div>
-       <div class="nexus-5-frame-port" style="float: right">
-         <img src="images/n512pt.png" />
-       </div>
        <h1>Nexus 5 - 37%</h1>
+       <div class="nexus-5-frame-port" style="float: right">
+           <img src="images/n512ptv.png" />
+         </div>
+        <div class="nexus-5-frame-port" style="float: right">
+          <img src="images/n512pt.png" />
+        </div>
        <h2>12pt font reads like a 4pt font</h2>
     </article>
   </slide>
   
   <slide class="display">
     <article>
-       <div class="nexus-7-frame-port" style="float: right; margin-right: -100px;">
+      <h1>Nexus 7 - 61%</h1>
+       <div class="nexus-7-frame-port" style="float: right;">
          <img src="images/n712ptv.png"/>
        </div>
-       <div class="nexus-7-frame-port" style="float: right; margin-right: -150px;">
+       <div class="nexus-7-frame-port" style="float: right;">
         <img src="images/n712pt.png"/>
         </div>
-       <h1>Nexus 7 - 61%</h1>
+       
        <h2>12pt font reads like a 7pt font.</h2>
     </article>
   </slide>
   
   <slide class="display">
      <article>
+       <h1>Nexus 10 - 82%</h1>
        <div class="nexus-10-frame-port" style="float: right">
          <img src="images/n1012pt.png"/>
        </div>
-       <h1>Nexus 10 - 82%</h1>
+
        <h2>12pt font reads like a 9pt font</h2>
     </article>
   </slide>
@@ -285,12 +290,13 @@ URL: https://code.google.com/p/io-2012-slides
   
   <slide class="display">
     <article>
+      <h1>Fit content in viewport</h1>
       <div class="nexus-5-frame-port demo" >
       <video c poster="images/poster.png" loop muted>
         <source src="videos/goal.webm">
       </video>
       </div>
-      <h1>Fit content in viewport</h1>
+      
       <ul>
         <li>It drives users crazy
         <li>Some platforms have scroll lock
@@ -304,12 +310,12 @@ URL: https://code.google.com/p/io-2012-slides
     
   <slide class="display">
     <article>
+      <h1>Media Queries</h1>
       <div class="nexus-5-frame-port demo" >
         <video poster="images/poster.png" loop muted>
           <source src="videos/cssorientation.webm">
         </video>
       </div>
-      <h1>Media Queries</h1>
       <h2>Adaptive to screen size</h2>
   	  <pre class="prettyprint">@media screen and (min-width: 800px) { ... }</pre>
 	    <pre class="prettyprint">@media screen and (device-aspect-ratio: 16/9) { ... }</pre>
@@ -322,14 +328,14 @@ URL: https://code.google.com/p/io-2012-slides
   <slide class="center-column display">
     <article>
         <h1>HTML5Rocks redesign</h1>
-        <h3>From 17 media queries to <b>4</b></h3>
+        <h2>From 17 media queries to <b>4</b></h2>
         <div>
-        <div class="nexus-5-frame-port demo" >
-          <img src="/images/h5rnew.png">
-        </div>
-        <div class="nexus-5-frame-port demo">
-          <img src="/images/h5rold.png">
-        </div>
+          <div class="nexus-5-frame-port demo" >
+            <img src="/images/h5rnew.png">
+          </div>
+          <div class="nexus-5-frame-port demo">
+            <img src="/images/h5rold.png">
+          </div>
         </div>
     </article>
   </slide>
@@ -384,7 +390,7 @@ URL: https://code.google.com/p/io-2012-slides
        <h1>Interaction</h1>
     </article>
   </slide>
-  
+  <!--
   <slide class="interaction">
       <article>
         <div class="nexus-5-frame-port demo" >
@@ -399,7 +405,7 @@ URL: https://code.google.com/p/io-2012-slides
           <li>and screenreader
         </ul>
      </article>
-  </slide>
+  </slide>-->
   
   <slide class="center-column interaction">
       <article>
@@ -422,20 +428,20 @@ URL: https://code.google.com/p/io-2012-slides
   
   <slide class="interaction">
       <article>
-        <img style="float: right;" src="images/touchtarget1.png">
+        
         <h1>User clicks a link</h1>
+        <img style="float: right;" src="images/touchtarget1.png">
          <ul class="highlight">
            <li class="current">Creates Tap target box
          </ul>
-         <a href="https://code.google.com/p/chromium/codesearch#chromium/src/content/browser/android/content_view_core_impl.cc&l=899
-         ">Source code</a>
+         <a href="https://code.google.com/p/chromium/codesearch#chromium/src/content/browser/android/content_view_core_impl.cc&l=899" style="clear: both;">Source code</a>
       </article>
    </slide>
   
   <slide class="interaction">
     <article>
-      <img style="float: right;" src="images/touchtarget2.png">
       <h1>User clicks a link</h1>
+      <img style="float: right;" src="images/touchtarget2.png">
       <ul class="highlight">
         <li>Creates Tap target box
         <li class="current">Adds bounding box around tap
@@ -446,8 +452,8 @@ URL: https://code.google.com/p/io-2012-slides
   
   <slide class="interaction">
      <article>
-       <img style="float: right" src="images/touchtarget3.png">
        <h1>User clicks a link</h1>
+       <img style="float: right" src="images/touchtarget3.png">
        <ul class="highlight">
          <li>Creates Tap target box
          <li>Adds a bounding box around tap
@@ -458,8 +464,8 @@ URL: https://code.google.com/p/io-2012-slides
    
    <slide class="interaction">
       <article>
-        <img style="float: right" src="images/touchtarget4.png">
         <h1>User clicks a link</h1>
+        <img style="float: right" src="images/touchtarget4.png">
         <ul class="highlight">
            <li>Creates Tap target box
            <li>Adds a bounding box around tap
@@ -471,8 +477,8 @@ URL: https://code.google.com/p/io-2012-slides
     
     <slide class="interaction">
         <article>
-          <img style="float: right" src="images/touchtarget5.png">
           <h1>User clicks a link</h1>
+          <img style="float: right" src="images/touchtarget5.png">
           <ul class="highlight">
              <li>Creates Tap target box
              <li>Adds a bounding box around tap
@@ -485,8 +491,8 @@ URL: https://code.google.com/p/io-2012-slides
       
    <slide class="interaction">
         <article>
-          <img style="float: right" src="images/touchtarget6.png">
           <h1>User clicks a link</h1>
+          <img style="float: right" src="images/touchtarget6.png">
           <ul class="highlight">
              <li>Creates Tap target box
              <li>Adds a bounding box around tap
@@ -500,8 +506,8 @@ URL: https://code.google.com/p/io-2012-slides
       
   <slide class="interaction">
         <article>
-          <img style="float: right" src="images/touchtarget7.png">
           <h1>User clicks a link</h1>
+          <img style="float: right" src="images/touchtarget7.png">
           <ul class="highlight">
              <li>Creates Tap target box
              <li>Adds a bounding box around tap
@@ -525,13 +531,12 @@ URL: https://code.google.com/p/io-2012-slides
   
   <slide class="interaction">
       <article>
+        <h1>Tap Targets</h1>
         <div class="nexus-5-frame-port demo" >
         <video poster="images/poster.png" loop muted>
           <source src="videos/taptargets.webm"></source>
         </video>
         </div>
-        <h1>Tap Targets</h1>
-        
         <h2>Minimum target recommendations</h2>
         <ul>
          <li>iOS: 44 pt
@@ -545,10 +550,10 @@ URL: https://code.google.com/p/io-2012-slides
     
   <slide class="interaction">
        <article>
-         <div class="nexus-5-frame-port" style="float: right;">
-           <img src="images/bbc.png">
-          </div>
          <h1>Tap Targets - On the web</h1>
+         <div class="nexus-5-frame-port" style="float: right;">
+            <img src="images/bbc.png">
+           </div>
          <h2>1 CSS px is 1/96in</h2>
          <ul>
            <li>iOS: 1 pt == 1/72nd of an inch == 33px
@@ -564,13 +569,12 @@ URL: https://code.google.com/p/io-2012-slides
   
   <slide class="interaction">
       <article>
+        <h1>Form inputs</h1>
         <div class="nexus-5-frame-port demo" >
         <video poster="images/poster.png" loop muted>
           <source src="videos/taptargetslabel.webm"></source>
         </video>
         </div>
-        [todo: demo highlight area that is tapped to show it working.]
-        <h1>Form inputs</h1>
        <pre class="prettyprint">&lt;form method="post">
   <b>&lt;label for="fname">First name:&lt;/label></b>
   &lt;input type="text" name="fname" id="fname">
@@ -593,10 +597,9 @@ URL: https://code.google.com/p/io-2012-slides
     
   <slide class="interaction">
     <article>
-      [TODO: re-record video]
       <div class="nexus-5-frame-port demo" >
       <video poster="images/poster.png" loop muted>
-        <source src="videos/touchevents.webm"></source>
+        <source src="videos/touchdelay.webm"></source>
       </video>
       </div>
        <h1>300ms click delay</h1>
@@ -800,9 +803,11 @@ form.addEventListener('autocompleteerror', function(){
         
   <slide class="interaction">
      <article>
-       <video class=demo poster="images/poster.png" loop muted>
+       <div class="nexus-5-frame-port demo" >
+       <video poster="images/poster.png" loop muted>
          <source src="videos/interstial.webm"></source>
        </video>
+       </div>
        <h1>Remove Plugins</h1>
        [TODO add stats about plugin usage]
        <ul class="goodbad">
@@ -813,9 +818,11 @@ form.addEventListener('autocompleteerror', function(){
      
   <slide class="interaction">
      <article>
-       <video class=demo poster="images/poster.png" loop muted>
+       <div class="nexus-5-frame-port demo" >
+       <video poster="images/poster.png" loop muted>
          <source src="videos/interstial.webm"></source>
        </video>
+       </div>
        <h1>Remove fullscreen app interstitials</h1>
        <h2>Don't stop users getting to your content</h2>
        <h2>But if you do need to use them, be smart</h2>

@@ -1,8 +1,8 @@
 $nexus-7-device-width: 1580px;
 $nexus-7-device-height: 2857px;
-$nexus-7-left-padding: 310px;
-$nexus-7-right-padding: 300px;
-$nexus-7-top-padding: 365px;
+$nexus-7-left-padding: 192px;
+$nexus-7-right-padding: 210px;
+$nexus-7-top-padding: 280px;
 $nexus-7-bottom-padding: 500px;
 
 @mixin size-nexus-7-frame-port($scale-factor) {
@@ -33,7 +33,7 @@ $nexus-7-bottom-padding: 500px;
     display: block;
    
 
-    @include size-nexus-7-frame-port(0.4);
+    @include size-nexus-7-frame-port(0.25);
 
     overflow: hidden;
 

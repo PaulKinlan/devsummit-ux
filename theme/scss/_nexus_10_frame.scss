@@ -1,8 +1,8 @@
 $nexus-10-device-width: 1580px;
 $nexus-10-device-height: 2857px;
-$nexus-10-left-padding: 275px;
-$nexus-10-right-padding: 300px;
-$nexus-10-top-padding: 280px;
+$nexus-10-left-padding: 220px;
+$nexus-10-right-padding: 220px;
+$nexus-10-top-padding: 190px;
 $nexus-10-bottom-padding: 500px;
 
 @mixin size-nexus-10-frame-port($scale-factor) {

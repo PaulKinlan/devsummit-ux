@@ -1,8 +1,8 @@
 $nexus-5-device-width: 1690px;
 $nexus-5-device-height: 2857px;
-$nexus-5-left-padding: 304px;
-$nexus-5-right-padding: 306px;
-$nexus-5-top-padding: 436px;
+$nexus-5-left-padding: 150px;
+$nexus-5-right-padding: 300px;
+$nexus-5-top-padding: 250px;
 $nexus-5-bottom-padding: 500px;
 
 @mixin size-nexus-5-frame-port($scale-factor) {
@@ -32,7 +32,7 @@ $nexus-5-bottom-padding: 500px;
 .nexus-5-frame-port {
     display: block;
 
-    @include size-nexus-5-frame-port(0.3);
+    @include size-nexus-5-frame-port(0.2);
 
     overflow: hidden;
 
