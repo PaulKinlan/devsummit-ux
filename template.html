@@ -79,7 +79,7 @@ URL: https://code.google.com/p/io-2012-slides
   
   <slide>
      <article>
-       <h1>and native is leading the way</h1>
+       <h1>... and native is leading the way</h1>
        <ul>
           <div class="nexus-5-frame-port"  style="float: left; margin-left: -20px;">
          <video poster="images/poster.png" loop muted>
@@ -765,11 +765,13 @@ URL: https://code.google.com/p/io-2012-slides
             <h1>Plan for requestAutoComplete</h1>
             <div class="nexus-5-frame-port demo" >
             <video poster="images/poster.png" loop muted>
-              <source src="videos/autocomplete.webm"></source>
+              <source src="videos/rac.webm"></source>
             </video>
             </div>
            
-            <pre class="prettyprint" data-lang="html">[todo, add feature detect]
+            <pre class="prettyprint" data-lang="html">if(!!<b>form.requestAutocomplete</b>) {
+  // enhance form        
+}
               
 button.addEventListener('click', function(){
   form.<b>requestAutocomplete</b>();
@@ -779,13 +781,13 @@ button.addEventListener('click', function(){
 form.addEventListener('<b>autocomplete</b>', function(){
   // successful rAc
   // Call your client-side form validation logic here
-  form.submit();  // trigger submit
+  <b>form.submit()</b>;  // trigger submit
 });
 
 form.addEventListener('<b>autocompleteerror</b>', function(){
   // event.reason is one of "cancel", "invalid" or "disabled".
-  // handle error...
 });</pre>
+<p>More Info: <a href="http://goo.gl/SEUt0n">goo.gl/SEUt0n</a></p>
           </article>
         </slide>
      
