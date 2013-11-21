@@ -79,7 +79,7 @@ URL: https://code.google.com/p/io-2012-slides
   
   <slide>
      <article>
-       <h1>Native is leading</h1>
+       <h1>and native is leading the way</h1>
        <ul>
           <div class="nexus-5-frame-port"  style="float: left; margin-left: -20px;">
          <video poster="images/poster.png" loop muted>
@@ -230,10 +230,6 @@ URL: https://code.google.com/p/io-2012-slides
         <li class="good">Set width=device-width</li>
         <li class="bad">Use a fixed viewport</li>
       </ul>
-      <p>
-        Demo: <a href="http://goo.gl/j9KLT">goo.gl/j9KLT</a>
-      </p>
-      
     </article>
     
   </slide>
@@ -358,18 +354,6 @@ URL: https://code.google.com/p/io-2012-slides
     </article>
   </slide>
   
-  <!--<slide class="display">
-      <article>
-       <h1>Size to content not to device</h1>
-       <h2>Less maintenance</h2>
-       <ul class="goodbad">
-          <li class="bad">Size to devices
-          <li class="good">Size to content
-        </ul>
-       [todo add image of resizing content.]
-     </article>
-  </slide>-->
-  
   <slide class="display">
       <article>
        <h1>Font readability</h1>     
@@ -417,7 +401,6 @@ URL: https://code.google.com/p/io-2012-slides
      <article>
        <h1>User clicks a link</h1>
        <img style="float: right;"  src="images/touchtarget.png">
-       
      </article>
   </slide>
   
@@ -531,9 +514,7 @@ URL: https://code.google.com/p/io-2012-slides
       <article>
         <h1>Tap Targets</h1>
         <div class="nexus-5-frame-port demo" >
-        <video poster="images/poster.png" loop muted>
-          <source src="videos/taptargets.webm"></source>
-        </video>
+        <img src="images/sizing.png">
         </div>
         <h2>Minimum target recommendations</h2>
         <ul>
@@ -542,7 +523,6 @@ URL: https://code.google.com/p/io-2012-slides
          <li>Microsoft: 9mm
         </ul>
         <h2>What do they mean in web terms?</h2>
-        
     </article>
   </slide>
     
@@ -550,17 +530,17 @@ URL: https://code.google.com/p/io-2012-slides
        <article>
          <h1>Tap Targets - On the web</h1>
          <div class="nexus-5-frame-port" style="float: right;">
-            <img src="images/bbc.png">
+            <img src="images/websizing.png">
            </div>
          <h2>1 CSS px is 1/96in</h2>
          <ul>
-           <li>iOS: 1 pt == 33px
-           <li>Android: 1 dip == 29px
-           <li>Microsoft: 9mm == 33px
+           <li>iOS: 33px
+           <li>Android: 29px
+           <li>Microsoft: 33px
          </ul>
         <ul class="goodbad">
-         <li class="good">Suggested target size: (26 CSS pixels - 26/96 == 7mm)
-         <li class="good">Suggested margin: (8 CSS Pixels - 8/96 == 2mm)
+         <li class="good">Suggested target size: 26 CSS pixels == 7mm
+         <li class="good">Suggested margin: 8 CSS Pixels == 2mm
         </ul>
      </article>
    </slide>
@@ -777,8 +757,6 @@ URL: https://code.google.com/p/io-2012-slides
 &lt;/form></pre>
  <li class="bad">autocomplete="off"
 </ul>
-   [TODO: get a list of all the autocompletion]
-          <p>Demo: <a href="http://goo.gl/CNMp6" target="_blank">goo.gl/CNMp6</a></p>
         </article>
       </slide>
       
@@ -794,38 +772,22 @@ URL: https://code.google.com/p/io-2012-slides
             <pre class="prettyprint" data-lang="html">[todo, add feature detect]
               
 button.addEventListener('click', function(){
-  form.requestAutocomplete();
+  form.<b>requestAutocomplete</b>();
 });
 
 // see details on event handling below
-form.addEventListener('autocomplete', function(){
+form.addEventListener('<b>autocomplete</b>', function(){
   // successful rAc
   // Call your client-side form validation logic here
   form.submit();  // trigger submit
 });
 
-form.addEventListener('autocompleteerror', function(){
+form.addEventListener('<b>autocompleteerror</b>', function(){
   // event.reason is one of "cancel", "invalid" or "disabled".
   // handle error...
 });</pre>
-            <p>Demo: <a href="http://goo.gl/CNMp6" target="_blank">goo.gl/CNMp6</a></p>
           </article>
         </slide>
-        <!--
-  <slide class="interaction">
-     <article>
-       <h1>Remove Plugins</h1>
-       <div class="nexus-5-frame-port demo" >
-       <video poster="images/poster.png" loop muted>
-         <source src="videos/interstial.webm"></source>
-       </video>
-       </div>
-       
-       <ul class="goodbad">
-          <li class="good">Youtube embed
-       </ul>
-     </article>
-   </slide>-->
      
   <slide class="interaction">
      <article>
