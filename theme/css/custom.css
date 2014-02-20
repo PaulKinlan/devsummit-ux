@@ -130,48 +130,8 @@ aside.note ul li:before {
 }
 
 p {
-	line-height: 1em;
-	margin-bottom: 0.5em;
-}
-
-h3.support.chrome {
-  background-image: 
-    url(../../../blogo/chrome.svg);
-  background-size: 32px 32px;
-  background-position: 32px 0px;
-  background-repeat: no-repeat;
-}
-
-h3.support.firefox {
-  background-image: 
-    url(/browser-logos/firefox.svg);
-  background-size: 32px 32px;
-  background-position: 64px 0px;
-  background-repeat: no-repeat;
-}
-
-h3.support.ie {
-  background-image: 
-    url(/browser-logos/ie10.svg);
-  background-size: 32px 32px;
-  background-position: 96px 0px;
-  background-repeat: no-repeat;
-}
-
-h3.support.safari {
-  background-image: 
-    url(/browser-logos/safari.png);
-  background-size: 32px 32px;
-  background-position: 128px 0px;
-  background-repeat: no-repeat;
-}
-
-h3.support.opera {
-  background-image: 
-    url(/browser-logos/opera.svg);
-  background-size: 32px 32px;
-  background-position: 160px 0px;
-  background-repeat: no-repeat;
+    line-height: 1em;
+    margin-bottom: 0.5em;
 }
 
 .timing-bar {
